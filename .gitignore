@@ -1,2 +1,5 @@
 /vendor
 /.idea
+.env
+.env.backup
+.env.production
