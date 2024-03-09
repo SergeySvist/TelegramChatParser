@@ -1,0 +1,17 @@
+{
+  "name": "project/telegram-chats-parser",
+  "description": "description",
+  "license": "proprietary",
+  "minimum-stability": "beta",
+  "authors": [
+    {
+      "name": "serge",
+      "email": "email@example.com"
+    }
+  ],
+  "require": {
+    "mongodb/mongodb": "^1.17",
+    "danog/madelineproto": "^8.0@beta",
+    "vlucas/phpdotenv": "^5.6"
+  }
+}
