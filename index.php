@@ -1,6 +1,8 @@
 <?php
 require_once __DIR__ . '/vendor/autoload.php';
-require_once 'user_info.php';
+require_once 'services/userinfo_service.php';
+require_once 'services/chat_service.php';
+require_once 'services/login_service.php';
 $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
 $dotenv->load();
 
@@ -20,47 +22,11 @@ $settings = (new AppInfo)
     ->setApiId($_ENV['TG_APIID'])
     ->setApiHash($_ENV['TG_APIHASH']);
 
-
 $MadelineProto = new API('session.madeline', $settings);
 //Login
-$MadelineProto->start();
+autoLogin($MadelineProto);
 
-//get ids of all user dialogs
-$dialogs = $MadelineProto->getDialogIds();
-$inserted_count = 0;
 
-foreach ($dialogs as $peer){
-    $inserted_count += getMessagesAndUploadInDb($MadelineProto, $collection, $peer);
-}
+getMessagesFromAllDialogsAndUploadInDb($MadelineProto, $collection);
 
-echo "\n\n Count of inserted rows: $inserted_count \n\n";
-$MadelineProto->stop();
 
-function getMessagesAndUploadInDb(API $MadelineProto, Collection $collection, int $peer): int{
-    $offset_id = 0;
-    $inserted_count = 0;
-    do {
-        //get messages from user dialog
-        $messages = $MadelineProto->messages->getHistory([
-                'peer' => $peer,
-                'offset_id' => $offset_id,
-                'offset_date' => 0,
-                'add_offset' => 0,
-                'limit' => 100,
-                'max_id' => 0,
-                'min_id' => 0,
-                'hash' => 0 ]
-        );
-
-        if (count($messages['messages']) == 0) break;
-
-        $offset_id = end($messages['messages'])['id'];
-
-        //insert messages in MongoDb
-        $inserted_count += $collection->insertMany($messages['messages'])->getInsertedCount();
-
-        $MadelineProto->sleep(2);
-    } while(true);
-
-    return $inserted_count;
-}
