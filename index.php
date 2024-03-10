@@ -1,5 +1,6 @@
 <?php
 require_once __DIR__ . '/vendor/autoload.php';
+require_once 'user_info.php';
 $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
 $dotenv->load();
 
@@ -19,6 +20,7 @@ $settings = (new AppInfo)
     ->setApiId($_ENV['TG_APIID'])
     ->setApiHash($_ENV['TG_APIHASH']);
 
+
 $MadelineProto = new API('session.madeline', $settings);
 //Login
 $MadelineProto->start();
@@ -32,6 +34,7 @@ foreach ($dialogs as $peer){
 }
 
 echo "\n\n Count of inserted rows: $inserted_count \n\n";
+$MadelineProto->stop();
 
 function getMessagesAndUploadInDb(API $MadelineProto, Collection $collection, int $peer): int{
     $offset_id = 0;
@@ -61,4 +64,3 @@ function getMessagesAndUploadInDb(API $MadelineProto, Collection $collection, in
 
     return $inserted_count;
 }
-
