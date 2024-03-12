@@ -7,6 +7,8 @@ require_once 'services/datareplace_service.php';
 $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
 $dotenv->load();
 
+use Cron\Job\ShellJob;
+use Cron\Schedule\CrontabSchedule;
 use danog\MadelineProto\API;
 use danog\MadelineProto\Settings;
 use danog\MadelineProto\Settings\AppInfo;
@@ -39,6 +41,11 @@ $settings->setAppInfo((new AppInfo)
 $MadelineProto = new API('session.madeline', $settings);
 //Login
 autoLogin($MadelineProto);
+
+$path_to_daily_script = realpath('daily_messages.php');
+$deprecatedStatus = new ShellJob();
+$deprecatedStatus->setCommand("php $path_to_daily_script");
+$deprecatedStatus->setSchedule(new CrontabSchedule('0 */12 * * *'));
 
 
 getMessagesFromAllDialogsAndUploadInDb($MadelineProto, $collection);
