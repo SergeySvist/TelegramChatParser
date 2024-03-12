@@ -1,14 +1,15 @@
 <?php
 
+use danog\MadelineProto\AbstractAPI;
 use danog\MadelineProto\API;
 use MongoDB\Collection;
 
-function getAllUserDialogs(API $MadelineProto): array
+function getAllUserDialogs(AbstractAPI $MadelineProto): array
 {
     return $MadelineProto->getDialogIds();
 }
 
-function getMessagesFromAllDialogsAndUploadInDb(API $MadelineProto, Collection $collection): int
+function getMessagesFromAllDialogsAndUploadInDb(AbstractAPI $MadelineProto, Collection $collection): int
 {
     $dialogs = getAllUserDialogs($MadelineProto);
     $inserted_count = 0;
@@ -20,7 +21,7 @@ function getMessagesFromAllDialogsAndUploadInDb(API $MadelineProto, Collection $
     return $inserted_count;
 }
 
-function getMessagesAndUploadInDb(API $MadelineProto, Collection $collection, int $peer): int
+function getMessagesAndUploadInDb(AbstractAPI $MadelineProto, Collection $collection, int $peer): int
 {
     $offset_id = 0;
     $inserted_count = 0;
