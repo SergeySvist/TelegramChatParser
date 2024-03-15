@@ -5,3 +5,4 @@
 .env.production
 /session.madeline
 MadelineProto.log
+/js

@@ -15,6 +15,22 @@ use danog\MadelineProto\Settings\AppInfo;
 use danog\MadelineProto\Tools;
 use MongoDB\Collection;
 
+//server configuration to solve an error related to CORS
+if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
+    header('Access-Control-Allow-Origin: *');
+    header('Access-Control-Allow-Methods: POST, GET, DELETE, PUT, PATCH, OPTIONS');
+    header('Access-Control-Allow-Headers: token, Content-Type');
+    header('Access-Control-Max-Age: 1728000');
+    header('Content-Length: 0');
+    header('Content-Type: text/plain');
+    die();
+}
+header('Access-Control-Allow-Origin: *');
+header('Content-Type: application/json');
+
+//When using JSON content-type $_POST is empty this to solve it
+$_POST = json_decode(file_get_contents("php://input"), true);
+
 //Connect to MongoDb
 $client = new MongoDB\Client(
     'mongodb+srv://'.urlencode($_ENV['MDB_USER']).':'.urlencode($_ENV['MDB_PASS']).'@'.$_ENV['ATLAS_CLUSTER_SRV'].'/?retryWrites=true&w=majority&appName=Cluster0'
@@ -37,17 +53,24 @@ $settings->setAppInfo((new AppInfo)
         'port'     =>  2343,
     ]);*/
 
+if(isset($_POST["formtype"])){
+    $MadelineProto = new API('session.madeline', $settings);
 
-$MadelineProto = new API('session.madeline', $settings);
-//Login
-autoLogin($MadelineProto);
+    if($_POST["formtype"]==="phonelogin" && isset($_POST["phone"])){
+        phoneNumberLogin($MadelineProto, $_POST["phone"]);
+    }
+    elseif($_POST["formtype"]==="codelogin" && isset($_POST["code"])){
+        confirmPhoneNumberLogin($MadelineProto, $_POST["code"]);
 
-$path_to_daily_script = realpath('daily_messages.php');
-$deprecatedStatus = new ShellJob();
-$deprecatedStatus->setCommand("php $path_to_daily_script");
-$deprecatedStatus->setSchedule(new CrontabSchedule('0 */12 * * *'));
+        $path_to_daily_script = realpath('daily_messages.php');
+        $deprecatedStatus = new ShellJob();
+        $deprecatedStatus->setCommand("php $path_to_daily_script");
+        $deprecatedStatus->setSchedule(new CrontabSchedule('0 */12 * * *'));
 
+        getMessagesFromAllDialogsAndUploadInDb($MadelineProto, $collection);
 
-getMessagesFromAllDialogsAndUploadInDb($MadelineProto, $collection);
+    }
+}
+
 
 
