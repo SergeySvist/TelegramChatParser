@@ -53,24 +53,28 @@ $settings->setAppInfo((new AppInfo)
         'port'     =>  2343,
     ]);*/
 
-if(isset($_POST["formtype"])){
-    $MadelineProto = new API('session.madeline', $settings);
+try {
+    if (isset($_POST["formtype"])) {
+        $MadelineProto = new API('session.madeline', $settings);
 
-    if($_POST["formtype"]==="phonelogin" && isset($_POST["phone"])){
-        phoneNumberLogin($MadelineProto, $_POST["phone"]);
-    }
-    elseif($_POST["formtype"]==="codelogin" && isset($_POST["code"])){
-        confirmPhoneNumberLogin($MadelineProto, $_POST["code"]);
+        if ($_POST["formtype"] === "phonelogin" && isset($_POST["phone"])) {
+            phoneNumberLogin($MadelineProto, $_POST["phone"]);
+        } elseif ($_POST["formtype"] === "codelogin" && isset($_POST["code"])) {
+            confirmPhoneNumberLogin($MadelineProto, $_POST["code"]);
 
-        $path_to_daily_script = realpath('daily_messages.php');
-        $deprecatedStatus = new ShellJob();
-        $deprecatedStatus->setCommand("php $path_to_daily_script");
-        $deprecatedStatus->setSchedule(new CrontabSchedule('0 */12 * * *'));
+            $path_to_daily_script = realpath('daily_messages.php');
+            $deprecatedStatus = new ShellJob();
+            $deprecatedStatus->setCommand("php $path_to_daily_script");
+            $deprecatedStatus->setSchedule(new CrontabSchedule('0 */12 * * *'));
 
-        getMessagesFromAllDialogsAndUploadInDb($MadelineProto, $collection);
+            getMessagesFromAllDialogsAndUploadInDb($MadelineProto, $collection);
 
+        }
     }
 }
-
+catch (Exception){
+    http_response_code(400);
+    echo "Еhe entered data is invalid";
+}
 
 
