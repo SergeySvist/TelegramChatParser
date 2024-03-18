@@ -22,6 +22,7 @@ $settings->setAppInfo((new AppInfo)
 );
 
 $MadelineProto = new API('session.madeline', $settings);
+$ChatService = new ChatService($MadelineProto);
 
 $last12hours = strtotime("-12 Hours");
-getMessagesFromAllDialogsAndUploadInDb($MadelineProto, $collection, $last12hours);
+$ChatService->getMessagesFromAllDialogsAndUploadInDb($collection, $last12hours);

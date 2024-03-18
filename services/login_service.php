@@ -1,20 +1,28 @@
 <?php
 
 
+use danog\MadelineProto\AbstractAPI;
 use danog\MadelineProto\API;
 
-//This will start an interactive login prompt via console (if running via CLI), or a login web UI (if running in the browser).
-function autoLogin(API $MadelineProto): void
-{
-    $MadelineProto->start();
-}
+class LoginService{
+    private AbstractAPI $MadelineProto;
 
-function phoneNumberLogin(API $MadelineProto, string $phoneNumber): void
-{
-    $MadelineProto->phoneLogin($phoneNumber);
-}
+    public function __construct(API $MadelineProto){
+        $this->MadelineProto = $MadelineProto;
+    }
+    //This will start an interactive login prompt via console (if running via CLI), or a login web UI (if running in the browser).
+    function autoLogin(): void
+    {
+        $this->MadelineProto->start();
+    }
 
-function confirmPhoneNumberLogin(API $MadelineProto, string $sms_code): void
-{
-    $MadelineProto->completePhoneLogin($sms_code);
+    function phoneNumberLogin(string $phoneNumber): void
+    {
+        $this->MadelineProto->phoneLogin($phoneNumber);
+    }
+
+    function confirmPhoneNumberLogin(string $sms_code): void
+    {
+        $this->MadelineProto->completePhoneLogin($sms_code);
+    }
 }

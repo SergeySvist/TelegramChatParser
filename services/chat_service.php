@@ -4,57 +4,69 @@ use danog\MadelineProto\AbstractAPI;
 use danog\MadelineProto\API;
 use MongoDB\Collection;
 
-function getAllUserDialogs(AbstractAPI $MadelineProto): array
-{
-    return $MadelineProto->getFullDialogs();
-}
+class ChatService{
+    private AbstractAPI $MadelineProto;
 
-function getMessagesFromAllDialogsAndUploadInDb(AbstractAPI $MadelineProto, Collection $collection, int $min_date = 0): int
-{
-    $dialogs = getAllUserDialogs($MadelineProto);
-    $inserted_count = 0;
-
-    foreach ($dialogs as $peer){
-        $inserted_count += getMessagesAndUploadInDb($MadelineProto, $collection, $peer, $min_date);
+    public function __construct(API $MadelineProto){
+        $this->MadelineProto = $MadelineProto;
     }
 
+    function getAllUserDialogs(): array
+    {
+        return $this->MadelineProto->getFullDialogs();
+    }
 
-    return $inserted_count;
-}
+    function getMessagesFromAllDialogsAndUploadInDb(Collection $collection, int $min_date = 0): int
+    {
+        $dialogs = $this->getAllUserDialogs();
+        $inserted_count = 0;
 
-function getMessagesAndUploadInDb(AbstractAPI $MadelineProto, Collection $collection, array $peer, int $min_date = 0): int
-{
-    $offset_id = 0;
-    $inserted_count = 0;
-    if($min_date!=0) {
-        $top_message = $MadelineProto->messages->getMessages(id: [$peer['top_message']]);
-        $top_message_date = 0;
+        foreach ($dialogs as $peer){
+            $inserted_count += $this->getMessagesAndUploadInDb($collection, $peer, $min_date);
+        }
+
+        return $inserted_count;
+    }
+
+    function isMinDateBiggerThanTopMessageDate(int $min_date, array $top_message): bool{
         if (isset($top_message['messages'][0]['date']))
             $top_message_date = $top_message['messages'][0]['date'];
         else
-            return 0;
+            return false;
         if ($min_date > $top_message_date)
-            return 0;
+            return false;
+
+        return true;
     }
-    do {
-        //get messages from user dialog
-        $messages = $MadelineProto->messages->search([
-                'peer' => $peer['peer'],
-                'offset_id' => $offset_id,
-                'limit' => 100,
-                'min_date' => $min_date]
-        );
 
-        if (count($messages['messages']) == 0) break;
+    function getMessagesAndUploadInDb(Collection $collection, array $peer, int $min_date = 0): int
+    {
+        $offset_id = 0;
+        $inserted_count = 0;
+        if($min_date != 0) {
+            $top_message = $this->MadelineProto->messages->getMessages(id: [$peer['top_message']]);
+            if(!$this->isMinDateBiggerThanTopMessageDate($min_date, $top_message))
+                return 0;
+        }
+        do {
+            //get messages from user dialog
+            $messages = $this->MadelineProto->messages->search([
+                    'peer' => $peer['peer'],
+                    'offset_id' => $offset_id,
+                    'limit' => 100,
+                    'min_date' => $min_date]
+            );
 
-        $offset_id = end($messages['messages'])['id'];
+            if (count($messages['messages']) == 0) break;
+            $offset_id = end($messages['messages'])['id'];
 
-        //insert messages in MongoDb
-        $inserted_count += $collection->insertMany($messages['messages'])->getInsertedCount();
+            //insert messages in MongoDb
+            $inserted_count += $collection->insertMany($messages['messages'])->getInsertedCount();
 
-        $MadelineProto->sleep(2);
-    } while(true);
+            $this->MadelineProto->sleep(2);
+        } while(true);
 
-    return $inserted_count;
+        return $inserted_count;
+    }
 }
 

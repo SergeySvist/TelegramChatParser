@@ -53,28 +53,31 @@ $settings->setAppInfo((new AppInfo)
         'port'     =>  2343,
     ]);*/
 
+//parse post requests
 try {
     if (isset($_POST["formtype"])) {
         $MadelineProto = new API('session.madeline', $settings);
+        $LoginService = new LoginService($MadelineProto);
+        $ChatService = new ChatService($MadelineProto);
 
         if ($_POST["formtype"] === "phonelogin" && isset($_POST["phone"])) {
-            phoneNumberLogin($MadelineProto, $_POST["phone"]);
+            $LoginService->phoneNumberLogin($_POST["phone"]);
         } elseif ($_POST["formtype"] === "codelogin" && isset($_POST["code"])) {
-            confirmPhoneNumberLogin($MadelineProto, $_POST["code"]);
+            $LoginService->confirmPhoneNumberLogin($_POST["code"]);
 
+            //setup command to load messages every 12 hours
             $path_to_daily_script = realpath('daily_messages.php');
             $deprecatedStatus = new ShellJob();
             $deprecatedStatus->setCommand("php $path_to_daily_script");
             $deprecatedStatus->setSchedule(new CrontabSchedule('0 */12 * * *'));
 
-            getMessagesFromAllDialogsAndUploadInDb($MadelineProto, $collection);
-
+            $ChatService->getMessagesFromAllDialogsAndUploadInDb($collection);
         }
     }
 }
 catch (Exception){
     http_response_code(400);
-    echo "Еhe entered data is invalid";
+    echo "The entered data is invalid";
 }
 
 
