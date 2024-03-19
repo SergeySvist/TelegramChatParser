@@ -16,9 +16,21 @@ class ChatService{
         return $this->MadelineProto->getFullDialogs();
     }
 
+    function filterDialogsExcludeChannels(array $dialogs): array{
+        $filteredDialogs = [];
+        foreach ($dialogs as $peer){
+            $info = $this->MadelineProto->getInfo($peer['peer']);
+
+            if($info['type']!=='channel')
+                $filteredDialogs[] = $peer;
+        }
+        return $filteredDialogs;
+    }
+
     function getMessagesFromAllDialogsAndUploadInDb(Collection $collection, int $min_date = 0): int
     {
         $dialogs = $this->getAllUserDialogs();
+        $dialogs = $this->filterDialogsExcludeChannels($dialogs);
         $inserted_count = 0;
 
         foreach ($dialogs as $peer){

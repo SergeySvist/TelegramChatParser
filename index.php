@@ -1,8 +1,8 @@
 <?php
 require_once __DIR__ . '/vendor/autoload.php';
 require_once 'services/userinfo_service.php';
-require_once 'services/chat_service.php';
-require_once 'services/login_service.php';
+require_once 'services/ChatService.php';
+require_once 'services/LoginService.php';
 require_once 'services/datareplace_service.php';
 $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
 $dotenv->load();
@@ -35,7 +35,8 @@ $_POST = json_decode(file_get_contents("php://input"), true);
 $client = new MongoDB\Client(
     'mongodb+srv://'.urlencode($_ENV['MDB_USER']).':'.urlencode($_ENV['MDB_PASS']).'@'.$_ENV['ATLAS_CLUSTER_SRV'].'/?retryWrites=true&w=majority&appName=Cluster0'
 );
-$collection = $client->selectCollection($_ENV['MDB_DATABASE'], $_ENV['MDB_COLLECTION']);
+$messages_collection = $client->selectCollection($_ENV['MDB_DATABASE'], $_ENV['MDB_MESSAGES_COLLECTION']);
+$users_collection = $client->selectCollection($_ENV['MDB_DATABASE'], $_ENV['MDB_USERS_COLLECTION']);
 
 //connect to MadelineProto
 $settings = new Settings;
@@ -52,32 +53,11 @@ $settings->setAppInfo((new AppInfo)
         'address'  => '0.0.0.0',
         'port'     =>  2343,
     ]);*/
+$MadelineProto = new API('session.madeline', $settings);
+$LoginService = new LoginService($MadelineProto);
+$ChatService = new ChatService($MadelineProto);
 
-//parse post requests
-try {
-    if (isset($_POST["formtype"])) {
-        $MadelineProto = new API('session.madeline', $settings);
-        $LoginService = new LoginService($MadelineProto);
-        $ChatService = new ChatService($MadelineProto);
 
-        if ($_POST["formtype"] === "phonelogin" && isset($_POST["phone"])) {
-            $LoginService->phoneNumberLogin($_POST["phone"]);
-        } elseif ($_POST["formtype"] === "codelogin" && isset($_POST["code"])) {
-            $LoginService->confirmPhoneNumberLogin($_POST["code"]);
-
-            //setup command to load messages every 12 hours
-            $path_to_daily_script = realpath('daily_messages.php');
-            $deprecatedStatus = new ShellJob();
-            $deprecatedStatus->setCommand("php $path_to_daily_script");
-            $deprecatedStatus->setSchedule(new CrontabSchedule('0 */12 * * *'));
-
-            $ChatService->getMessagesFromAllDialogsAndUploadInDb($collection);
-        }
-    }
-}
-catch (Exception){
-    http_response_code(400);
-    echo "The entered data is invalid";
-}
-
+//main endpoint
+$LoginService->authAndStartParse($ChatService, $users_collection, $messages_collection);
 

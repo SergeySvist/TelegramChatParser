@@ -1,6 +1,6 @@
 <?php
 require_once __DIR__ . '/vendor/autoload.php';
-require_once 'services/chat_service.php';
+require_once 'services/ChatService.php';
 
 use danog\MadelineProto\API;
 use danog\MadelineProto\Settings;

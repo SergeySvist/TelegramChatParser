@@ -1801,3 +1801,1069 @@ If you intentionally deleted this account, ignore this message.
 Session:        	Garbage collected 18 incoming messages in DC 2, 0 left
 Session:        	Can't garbage collect updates.getDifference with message ID 7347733778304882516 sent 5 seconds ago in DC 2, no response has been received or it wasn't yet handled!
 Session:        	Garbage collected 10 outgoing messages in DC 2, 1 left
+Logger:         	MadelineProto 8.0.0-beta194
+Logger:         	Copyright (C) 2016-2024 Daniil Gentili
+Logger:         	Licensed under AGPLv3
+Logger:         	https://github.com/danog/MadelineProto
+Serialization:  	Got exclusive session lock!
+MTProto:        	The database settings have changed!
+TL:             	Loading TL schemes...
+TL:             	Parsing TL_telegram_v174.tl...
+TL:             	Parsing TL_mtproto_v1.tl...
+TL:             	Parsing TL_secret.tl...
+MTProto:        	The serialization settings have changed!
+TL:             	Loading TL schemes...
+TL:             	Parsing TL_telegram_v174.tl...
+TL:             	Parsing TL_mtproto_v1.tl...
+TL:             	Parsing TL_secret.tl...
+DataCenter:     	Acquiring connect lock for 2!
+DataCenter:     	Connecting to DC 2
+DataCenterConnection: 	Restoring 0 messages to DC 2
+Session:        	Resetting session in DC 2.0...
+Connection:     	Connecting to DC 2.0 via tcp://149.154.167.51:443 main DC 2, via ipv4 using AbridgedStream => BufferedRawStream => DefaultStream 
+GarbageCollector: 	gc_collect_cycles done. Cleaned memory: 0 Mb
+Connection:     	Connected to DC 2.0 via tcp://149.154.167.51:443 main DC 2, via ipv4 using AbridgedStream => BufferedRawStream => DefaultStream!
+DataCenterConnection: 	Acquiring lock in order to init auth for DC 2
+DataCenterConnection: 	Initing auth for DC 2
+DataCenterConnection: 	Generating permanent authorization key for DC 2...
+AuthKeyHandler: 	Requesting pq...
+Session:        	Garbage collected 0 outgoing messages in DC 2, 1 left
+ResponseHandler: 	Trying to assign a response of type ResPQ to its request...
+ResponseHandler: 	Does the request of return type ResPQ match?
+ResponseHandler: 	Yes
+AuthKeyHandler: 	Factorizing with native_single_cpp (please wait, might take a while)
+AuthKeyHandler: 	Factorizing with python_single_alt (please wait, might take a while)
+AuthKeyHandler: 	Install https://prime.madelineproto.xyz and the FFI extension to speed this up!
+AuthKeyHandler: 	Factorizing with python_single (please wait, might take a while)
+AuthKeyHandler: 	Install https://prime.madelineproto.xyz and the FFI extension to speed this up!
+AuthKeyHandler: 	Factorizing with native_single (please wait, might take a while)
+AuthKeyHandler: 	Install https://prime.madelineproto.xyz and the FFI extension to speed this up!
+AuthKeyHandler: 	Factorization 1332928419029903723 = 1001667637 * 1330709279
+AuthKeyHandler: 	Starting Diffie Hellman key exchange
+ResponseHandler: 	Trying to assign a response of type Server_DH_Params to its request...
+ResponseHandler: 	Does the request of return type Server_DH_Params match?
+ResponseHandler: 	Yes
+AuthKeyHandler: 	Server-client time delta = 3.0 s
+Crypt:          	Executing p/g checks (1/2)...
+Crypt:          	Executing p/g checks (2/2)...
+Crypt:          	Executing g check...
+Crypt:          	Executing g_a check (1/2)...
+Crypt:          	Executing g_a check (2/2)...
+AuthKeyHandler: 	Generating b...
+AuthKeyHandler: 	Generating g_b...
+Crypt:          	Executing g_a check (1/2)...
+Crypt:          	Executing g_a check (2/2)...
+AuthKeyHandler: 	Executing g_b check...
+AuthKeyHandler: 	Preparing client_DH_inner_data...
+AuthKeyHandler: 	Executing set_client_DH_params...
+ResponseHandler: 	Trying to assign a response of type Set_client_DH_params_answer to its request...
+ResponseHandler: 	Does the request of return type Set_client_DH_params_answer match?
+ResponseHandler: 	Yes
+AuthKeyHandler: 	Generating authorization key (install gmp to speed up this process)...
+AuthKeyHandler: 	Diffie Hellman key exchange processed successfully!
+AuthKeyHandler: 	Auth key generated
+DataCenterConnection: 	Generating temporary authorization key for DC 2...
+AuthKeyHandler: 	Requesting pq...
+ResponseHandler: 	Trying to assign a response of type ResPQ to its request...
+ResponseHandler: 	Does the request of return type ResPQ match?
+ResponseHandler: 	Yes
+AuthKeyHandler: 	Factorizing with native_single_cpp (please wait, might take a while)
+AuthKeyHandler: 	Factorizing with python_single_alt (please wait, might take a while)
+AuthKeyHandler: 	Install https://prime.madelineproto.xyz and the FFI extension to speed this up!
+AuthKeyHandler: 	Factorizing with python_single (please wait, might take a while)
+AuthKeyHandler: 	Install https://prime.madelineproto.xyz and the FFI extension to speed this up!
+AuthKeyHandler: 	Factorizing with native_single (please wait, might take a while)
+AuthKeyHandler: 	Install https://prime.madelineproto.xyz and the FFI extension to speed this up!
+AuthKeyHandler: 	Factorization 2265248906251071271 = 1179520313 * 1920483167
+AuthKeyHandler: 	Starting Diffie Hellman key exchange
+ResponseHandler: 	Trying to assign a response of type Server_DH_Params to its request...
+ResponseHandler: 	Does the request of return type Server_DH_Params match?
+ResponseHandler: 	Yes
+AuthKeyHandler: 	Server-client time delta = 3.0 s
+Crypt:          	Executing p/g checks (1/2)...
+Crypt:          	Executing p/g checks (2/2)...
+Crypt:          	Executing g check...
+Crypt:          	Executing g_a check (1/2)...
+Crypt:          	Executing g_a check (2/2)...
+AuthKeyHandler: 	Generating b...
+AuthKeyHandler: 	Generating g_b...
+Crypt:          	Executing g_a check (1/2)...
+Crypt:          	Executing g_a check (2/2)...
+AuthKeyHandler: 	Executing g_b check...
+AuthKeyHandler: 	Preparing client_DH_inner_data...
+AuthKeyHandler: 	Executing set_client_DH_params...
+ResponseHandler: 	Trying to assign a response of type Set_client_DH_params_answer to its request...
+ResponseHandler: 	Does the request of return type Set_client_DH_params_answer match?
+ResponseHandler: 	Yes
+AuthKeyHandler: 	Generating authorization key (install gmp to speed up this process)...
+AuthKeyHandler: 	Diffie Hellman key exchange processed successfully!
+AuthKeyHandler: 	Auth key generated
+DataCenterConnection: 	Binding authorization keys...
+WriteLoop:      	Skipping help.getConfig pending due to unbound keys in DC 2.0
+WriteLoop:      	Skipping help.getConfig pending due to unbound keys in DC 2.0
+DataCenterConnection: 	Bound temporary and permanent authorization keys, DC 2
+WriteLoop:      	Writing client info (also executing help.getConfig)...
+WriteLoop:      	Writing client info (also executing help.getConfig)...
+WriteLoop:      	Writing client info (also executing help.getConfig)...
+MTProto:        	Updated config!
+DataCenterConnection: 	Done initing auth for DC 2
+PingLoop:       	Ping DC 2.0
+MTProto:        	Updated config!
+MTProto:        	Starting update system
+APIWrapper:     	Prompting initial serialization...
+SessionPaths:   	Waiting for exclusive lock of /var/www/html/session.madeline/safe.php.lock...
+SessionPaths:   	Got exclusive lock of /var/www/html/session.madeline/safe.php.lock...
+SessionPaths:   	Waiting for exclusive lock of /var/www/html/session.madeline/lightState.php.lock...
+SessionPaths:   	Got exclusive lock of /var/www/html/session.madeline/lightState.php.lock...
+APIWrapper:     	Saved session!
+APIWrapper:     	Done initial serialization!
+APIWrapper:     	MadelineProto is ready!
+Login:          	Sending code...
+Login:          	Code sent successfully! Once you receive the code you should use the completePhoneLogin function.
+MTProto:        	Prompting final serialization (SHUTDOWN)...
+SessionPaths:   	Waiting for exclusive lock of /var/www/html/session.madeline/safe.php.lock...
+SessionPaths:   	Got exclusive lock of /var/www/html/session.madeline/safe.php.lock...
+SessionPaths:   	Waiting for exclusive lock of /var/www/html/session.madeline/lightState.php.lock...
+SessionPaths:   	Got exclusive lock of /var/www/html/session.madeline/lightState.php.lock...
+APIWrapper:     	Saved session!
+MTProto:        	Done final serialization (SHUTDOWN)!
+MTProto:        	Shutting down MadelineProto (MTProto)
+MTProto:        	Will unreference instance
+DataCenterConnection: 	Disconnecting from shared DC 2
+Connection:     	Disconnecting from DC 2.0
+DataCenterConnection: 	Backed up  from DC 2.0
+Connection:     	Disconnected from DC 2.0
+DataCenterConnection: 	Backed up 0, added to 0 existing messages) from DC 2
+MTProto:        	Unreferenced instance
+MTProto:        	Successfully destroyed MadelineProto
+Logger:         	MadelineProto 8.0.0-beta194
+Logger:         	Copyright (C) 2016-2024 Daniil Gentili
+Logger:         	Licensed under AGPLv3
+Logger:         	https://github.com/danog/MadelineProto
+Logger:         	MadelineProto 8.0.0-beta194
+Logger:         	Copyright (C) 2016-2024 Daniil Gentili
+Logger:         	Licensed under AGPLv3
+Logger:         	https://github.com/danog/MadelineProto
+Serialization:  	Got exclusive session lock!
+DataCenter:     	Acquiring connect lock for 2!
+DataCenter:     	Connecting to DC 2
+DataCenterConnection: 	Restoring 0 messages to DC 2
+Session:        	Resetting session in DC 2.0...
+Connection:     	Connecting to DC 2.0 via tcp://149.154.167.41:443 main DC 2, via ipv4 using AbridgedStream => BufferedRawStream => DefaultStream 
+GarbageCollector: 	gc_collect_cycles done. Cleaned memory: 0 Mb
+Connection:     	Connected to DC 2.0 via tcp://149.154.167.41:443 main DC 2, via ipv4 using AbridgedStream => BufferedRawStream => DefaultStream!
+DataCenterConnection: 	Acquiring lock in order to init auth for DC 2
+DataCenterConnection: 	Initing auth for DC 2
+DataCenterConnection: 	Done initing auth for DC 2
+Session:        	Garbage collected 0 outgoing messages in DC 2, 1 left
+PingLoop:       	Ping DC 2.0
+MTProto:        	AUTH_KEY_UNREGISTERED
+MTProto:        	Starting update system
+APIWrapper:     	MadelineProto is ready!
+SessionPaths:   	Waiting for exclusive lock of /var/www/html/session.madeline/ipcState.php.lock...
+SessionPaths:   	Got exclusive lock of /var/www/html/session.madeline/ipcState.php.lock...
+SessionPaths:   	Waiting for exclusive lock of /var/www/html/session.madeline/safe.php.lock...
+SessionPaths:   	Got exclusive lock of /var/www/html/session.madeline/safe.php.lock...
+SessionPaths:   	Waiting for exclusive lock of /var/www/html/session.madeline/lightState.php.lock...
+SessionPaths:   	Got exclusive lock of /var/www/html/session.madeline/lightState.php.lock...
+APIWrapper:     	Saved session!
+Session:        	Garbage collected 5 incoming messages in DC 2, 0 left
+Session:        	Garbage collected 2 outgoing messages in DC 2, 0 left
+SessionPaths:   	Waiting for exclusive lock of /var/www/html/session.madeline/safe.php.lock...
+SessionPaths:   	Got exclusive lock of /var/www/html/session.madeline/safe.php.lock...
+SessionPaths:   	Waiting for exclusive lock of /var/www/html/session.madeline/lightState.php.lock...
+SessionPaths:   	Got exclusive lock of /var/www/html/session.madeline/lightState.php.lock...
+APIWrapper:     	Saved session!
+Server:         	Accepted IPC client connection!
+Server:         	Starting IPC server /var/www/html/session.madeline (process)
+ProcessRunner:  	Starting process with '/usr/local/bin/php' '-dhtml_errors=0' '-ddisplay_errors=0' '-dlog_errors=1' '/var/www/html/vendor/danog/madelineproto/src/Ipc/Runner/entry.php' 'madeline-ipc' '/var/www/html/session.madeline' '166152135'
+Exception:      	fsockopen(): php_network_getaddresses: getaddrinfo for phpfpm.local failed: Temporary failure in name resolution in WebRunner.php:122
+WebRunner:      	Error while sending to tcp://phpfpm.local:80: \danog\MadelineProto\Exception: fsockopen(): php_network_getaddresses: getaddrinfo for phpfpm.local failed: Temporary failure in name resolution in /var/www/html/vendor/danog/madelineproto/src/Ipc/Runner/WebRunner.php:122
+Revision: 8.0.0-beta194
+TL Trace:
+<br>
+exceptionErrorHandler(2,"fsockopen(): php_network_getaddresses: getaddrinfo for phpfpm.local failed: Temporary failure in name resolution","\/var\/www\/html\/vendor\/danog\/madelineproto\/src\/Ipc\/Runner\/WebRunner.php",122)<br>
+WebRunner.php(122): 	fsockopen("tcp:\/\/phpfpm.local",80)<br>
+WebRunner.php(77):  	selfStart("\/vendor\/danog\/madelineproto\/src\/Ipc\/Runner\/entry.php?argv%5B0%5D=madeline-ipc&argv%5B1%5D=%2Fvar%2Fwww%2Fhtml%2Fsession.madeline&argv%5B2%5D=166152135&cwd=%2Fvar%2Fwww%2Fhtml&MadelineSelfRestart=1")<br>
+Server.php(110):    	start("\/var\/www\/html\/session.madeline",166152135)<br>
+Serialization.php(175):	startMe({})<br>
+AbstractDriver.php(425):	Amp\{closure}(null,null,[])<br>
+AbstractDriver.php(562):	invokeMicrotasks()<br>
+Revolt\EventLoop\Internal\{closure}()<br>
+AbstractDriver.php(498):	start()<br>
+AbstractDriver.php(537):	invokeCallbacks()<br>
+Revolt\EventLoop\Internal\{closure}()<br>
+AbstractDriver.php(94):	start()<br>
+DriverSuspension.php(117):	Revolt\EventLoop\Internal\{closure}()<br>
+Future.php(251):    	suspend()<br>
+API.php(307):       	await({})<br>
+API.php(194):       	connectToMadelineProto({})<br>
+index.php(59):      	__construct("session.madeline",{})
+Exception:      	fsockopen(): php_network_getaddresses: getaddrinfo for phpfpm.local failed: Temporary failure in name resolution in WebRunner.php:122
+WebRunner:      	Error while sending to tls://phpfpm.local:80: \danog\MadelineProto\Exception: fsockopen(): php_network_getaddresses: getaddrinfo for phpfpm.local failed: Temporary failure in name resolution in /var/www/html/vendor/danog/madelineproto/src/Ipc/Runner/WebRunner.php:122
+Revision: 8.0.0-beta194
+TL Trace:
+<br>
+exceptionErrorHandler(2,"fsockopen(): php_network_getaddresses: getaddrinfo for phpfpm.local failed: Temporary failure in name resolution","\/var\/www\/html\/vendor\/danog\/madelineproto\/src\/Ipc\/Runner\/WebRunner.php",122)<br>
+WebRunner.php(122): 	fsockopen("tls:\/\/phpfpm.local",80)<br>
+WebRunner.php(77):  	selfStart("\/vendor\/danog\/madelineproto\/src\/Ipc\/Runner\/entry.php?argv%5B0%5D=madeline-ipc&argv%5B1%5D=%2Fvar%2Fwww%2Fhtml%2Fsession.madeline&argv%5B2%5D=166152135&cwd=%2Fvar%2Fwww%2Fhtml&MadelineSelfRestart=1")<br>
+Server.php(110):    	start("\/var\/www\/html\/session.madeline",166152135)<br>
+Serialization.php(175):	startMe({})<br>
+AbstractDriver.php(425):	Amp\{closure}(null,null,[])<br>
+AbstractDriver.php(562):	invokeMicrotasks()<br>
+Revolt\EventLoop\Internal\{closure}()<br>
+AbstractDriver.php(498):	start()<br>
+AbstractDriver.php(537):	invokeCallbacks()<br>
+Revolt\EventLoop\Internal\{closure}()<br>
+AbstractDriver.php(94):	start()<br>
+DriverSuspension.php(117):	Revolt\EventLoop\Internal\{closure}()<br>
+Future.php(251):    	suspend()<br>
+API.php(307):       	await({})<br>
+API.php(194):       	connectToMadelineProto({})<br>
+index.php(59):      	__construct("session.madeline",{})
+Exception:      	fsockopen(): php_network_getaddresses: getaddrinfo for phpfpm.local failed: Temporary failure in name resolution in WebRunner.php:122
+WebRunner:      	Error while sending to tls://phpfpm.local:443: \danog\MadelineProto\Exception: fsockopen(): php_network_getaddresses: getaddrinfo for phpfpm.local failed: Temporary failure in name resolution in /var/www/html/vendor/danog/madelineproto/src/Ipc/Runner/WebRunner.php:122
+Revision: 8.0.0-beta194
+TL Trace:
+<br>
+exceptionErrorHandler(2,"fsockopen(): php_network_getaddresses: getaddrinfo for phpfpm.local failed: Temporary failure in name resolution","\/var\/www\/html\/vendor\/danog\/madelineproto\/src\/Ipc\/Runner\/WebRunner.php",122)<br>
+WebRunner.php(122): 	fsockopen("tls:\/\/phpfpm.local",443)<br>
+WebRunner.php(77):  	selfStart("\/vendor\/danog\/madelineproto\/src\/Ipc\/Runner\/entry.php?argv%5B0%5D=madeline-ipc&argv%5B1%5D=%2Fvar%2Fwww%2Fhtml%2Fsession.madeline&argv%5B2%5D=166152135&cwd=%2Fvar%2Fwww%2Fhtml&MadelineSelfRestart=1")<br>
+Server.php(110):    	start("\/var\/www\/html\/session.madeline",166152135)<br>
+Serialization.php(175):	startMe({})<br>
+AbstractDriver.php(425):	Amp\{closure}(null,null,[])<br>
+AbstractDriver.php(562):	invokeMicrotasks()<br>
+Revolt\EventLoop\Internal\{closure}()<br>
+AbstractDriver.php(498):	start()<br>
+AbstractDriver.php(537):	invokeCallbacks()<br>
+Revolt\EventLoop\Internal\{closure}()<br>
+AbstractDriver.php(94):	start()<br>
+DriverSuspension.php(117):	Revolt\EventLoop\Internal\{closure}()<br>
+Future.php(251):    	suspend()<br>
+API.php(307):       	await({})<br>
+API.php(194):       	connectToMadelineProto({})<br>
+index.php(59):      	__construct("session.madeline",{})
+Exception:      	Could not connect to ourselves, please check the server configuration! in WebRunner.php:135
+Server:         	\danog\MadelineProto\Exception: Could not connect to ourselves, please check the server configuration! in /var/www/html/vendor/danog/madelineproto/src/Ipc/Runner/WebRunner.php:135
+Revision: 8.0.0-beta194
+TL Trace:
+<br>
+WebRunner.php(77):  	selfStart("\/vendor\/danog\/madelineproto\/src\/Ipc\/Runner\/entry.php?argv%5B0%5D=madeline-ipc&argv%5B1%5D=%2Fvar%2Fwww%2Fhtml%2Fsession.madeline&argv%5B2%5D=166152135&cwd=%2Fvar%2Fwww%2Fhtml&MadelineSelfRestart=1")<br>
+Server.php(110):    	start("\/var\/www\/html\/session.madeline",166152135)<br>
+Serialization.php(175):	startMe({})<br>
+AbstractDriver.php(425):	Amp\{closure}(null,null,[])<br>
+AbstractDriver.php(562):	invokeMicrotasks()<br>
+Revolt\EventLoop\Internal\{closure}()<br>
+AbstractDriver.php(498):	start()<br>
+AbstractDriver.php(537):	invokeCallbacks()<br>
+Revolt\EventLoop\Internal\{closure}()<br>
+AbstractDriver.php(94):	start()<br>
+DriverSuspension.php(117):	Revolt\EventLoop\Internal\{closure}()<br>
+Future.php(251):    	suspend()<br>
+API.php(307):       	await({})<br>
+API.php(194):       	connectToMadelineProto({})<br>
+index.php(59):      	__construct("session.madeline",{})
+Server:         	Starting IPC server /var/www/html/session.madeline (web)
+Exception:      	fsockopen(): php_network_getaddresses: getaddrinfo for phpfpm.local failed: Temporary failure in name resolution in WebRunner.php:122
+WebRunner:      	Error while sending to tcp://phpfpm.local:80: \danog\MadelineProto\Exception: fsockopen(): php_network_getaddresses: getaddrinfo for phpfpm.local failed: Temporary failure in name resolution in /var/www/html/vendor/danog/madelineproto/src/Ipc/Runner/WebRunner.php:122
+Revision: 8.0.0-beta194
+TL Trace:
+<br>
+exceptionErrorHandler(2,"fsockopen(): php_network_getaddresses: getaddrinfo for phpfpm.local failed: Temporary failure in name resolution","\/var\/www\/html\/vendor\/danog\/madelineproto\/src\/Ipc\/Runner\/WebRunner.php",122)<br>
+WebRunner.php(122): 	fsockopen("tcp:\/\/phpfpm.local",80)<br>
+WebRunner.php(77):  	selfStart("\/vendor\/danog\/madelineproto\/src\/Ipc\/Runner\/entry.php?argv%5B0%5D=madeline-ipc&argv%5B1%5D=%2Fvar%2Fwww%2Fhtml%2Fsession.madeline&argv%5B2%5D=166152135&cwd=%2Fvar%2Fwww%2Fhtml&MadelineSelfRestart=1")<br>
+Server.php(117):    	start("\/var\/www\/html\/session.madeline",166152135)<br>
+Serialization.php(175):	startMe({})<br>
+AbstractDriver.php(425):	Amp\{closure}(null,null,[])<br>
+AbstractDriver.php(562):	invokeMicrotasks()<br>
+Revolt\EventLoop\Internal\{closure}()<br>
+AbstractDriver.php(498):	start()<br>
+AbstractDriver.php(537):	invokeCallbacks()<br>
+Revolt\EventLoop\Internal\{closure}()<br>
+AbstractDriver.php(94):	start()<br>
+DriverSuspension.php(117):	Revolt\EventLoop\Internal\{closure}()<br>
+Future.php(251):    	suspend()<br>
+API.php(307):       	await({})<br>
+API.php(194):       	connectToMadelineProto({})<br>
+index.php(59):      	__construct("session.madeline",{})
+Exception:      	fsockopen(): php_network_getaddresses: getaddrinfo for phpfpm.local failed: Temporary failure in name resolution in WebRunner.php:122
+WebRunner:      	Error while sending to tls://phpfpm.local:80: \danog\MadelineProto\Exception: fsockopen(): php_network_getaddresses: getaddrinfo for phpfpm.local failed: Temporary failure in name resolution in /var/www/html/vendor/danog/madelineproto/src/Ipc/Runner/WebRunner.php:122
+Revision: 8.0.0-beta194
+TL Trace:
+<br>
+exceptionErrorHandler(2,"fsockopen(): php_network_getaddresses: getaddrinfo for phpfpm.local failed: Temporary failure in name resolution","\/var\/www\/html\/vendor\/danog\/madelineproto\/src\/Ipc\/Runner\/WebRunner.php",122)<br>
+WebRunner.php(122): 	fsockopen("tls:\/\/phpfpm.local",80)<br>
+WebRunner.php(77):  	selfStart("\/vendor\/danog\/madelineproto\/src\/Ipc\/Runner\/entry.php?argv%5B0%5D=madeline-ipc&argv%5B1%5D=%2Fvar%2Fwww%2Fhtml%2Fsession.madeline&argv%5B2%5D=166152135&cwd=%2Fvar%2Fwww%2Fhtml&MadelineSelfRestart=1")<br>
+Server.php(117):    	start("\/var\/www\/html\/session.madeline",166152135)<br>
+Serialization.php(175):	startMe({})<br>
+AbstractDriver.php(425):	Amp\{closure}(null,null,[])<br>
+AbstractDriver.php(562):	invokeMicrotasks()<br>
+Revolt\EventLoop\Internal\{closure}()<br>
+AbstractDriver.php(498):	start()<br>
+AbstractDriver.php(537):	invokeCallbacks()<br>
+Revolt\EventLoop\Internal\{closure}()<br>
+AbstractDriver.php(94):	start()<br>
+DriverSuspension.php(117):	Revolt\EventLoop\Internal\{closure}()<br>
+Future.php(251):    	suspend()<br>
+API.php(307):       	await({})<br>
+API.php(194):       	connectToMadelineProto({})<br>
+index.php(59):      	__construct("session.madeline",{})
+Exception:      	fsockopen(): php_network_getaddresses: getaddrinfo for phpfpm.local failed: Temporary failure in name resolution in WebRunner.php:122
+WebRunner:      	Error while sending to tls://phpfpm.local:443: \danog\MadelineProto\Exception: fsockopen(): php_network_getaddresses: getaddrinfo for phpfpm.local failed: Temporary failure in name resolution in /var/www/html/vendor/danog/madelineproto/src/Ipc/Runner/WebRunner.php:122
+Revision: 8.0.0-beta194
+TL Trace:
+<br>
+exceptionErrorHandler(2,"fsockopen(): php_network_getaddresses: getaddrinfo for phpfpm.local failed: Temporary failure in name resolution","\/var\/www\/html\/vendor\/danog\/madelineproto\/src\/Ipc\/Runner\/WebRunner.php",122)<br>
+WebRunner.php(122): 	fsockopen("tls:\/\/phpfpm.local",443)<br>
+WebRunner.php(77):  	selfStart("\/vendor\/danog\/madelineproto\/src\/Ipc\/Runner\/entry.php?argv%5B0%5D=madeline-ipc&argv%5B1%5D=%2Fvar%2Fwww%2Fhtml%2Fsession.madeline&argv%5B2%5D=166152135&cwd=%2Fvar%2Fwww%2Fhtml&MadelineSelfRestart=1")<br>
+Server.php(117):    	start("\/var\/www\/html\/session.madeline",166152135)<br>
+Serialization.php(175):	startMe({})<br>
+AbstractDriver.php(425):	Amp\{closure}(null,null,[])<br>
+AbstractDriver.php(562):	invokeMicrotasks()<br>
+Revolt\EventLoop\Internal\{closure}()<br>
+AbstractDriver.php(498):	start()<br>
+AbstractDriver.php(537):	invokeCallbacks()<br>
+Revolt\EventLoop\Internal\{closure}()<br>
+AbstractDriver.php(94):	start()<br>
+DriverSuspension.php(117):	Revolt\EventLoop\Internal\{closure}()<br>
+Future.php(251):    	suspend()<br>
+API.php(307):       	await({})<br>
+API.php(194):       	connectToMadelineProto({})<br>
+index.php(59):      	__construct("session.madeline",{})
+Exception:      	Could not connect to ourselves, please check the server configuration! in WebRunner.php:135
+Server:         	\danog\MadelineProto\Exception: Could not connect to ourselves, please check the server configuration! in /var/www/html/vendor/danog/madelineproto/src/Ipc/Runner/WebRunner.php:135
+Revision: 8.0.0-beta194
+TL Trace:
+<br>
+WebRunner.php(77):  	selfStart("\/vendor\/danog\/madelineproto\/src\/Ipc\/Runner\/entry.php?argv%5B0%5D=madeline-ipc&argv%5B1%5D=%2Fvar%2Fwww%2Fhtml%2Fsession.madeline&argv%5B2%5D=166152135&cwd=%2Fvar%2Fwww%2Fhtml&MadelineSelfRestart=1")<br>
+Server.php(117):    	start("\/var\/www\/html\/session.madeline",166152135)<br>
+Serialization.php(175):	startMe({})<br>
+AbstractDriver.php(425):	Amp\{closure}(null,null,[])<br>
+AbstractDriver.php(562):	invokeMicrotasks()<br>
+Revolt\EventLoop\Internal\{closure}()<br>
+AbstractDriver.php(498):	start()<br>
+AbstractDriver.php(537):	invokeCallbacks()<br>
+Revolt\EventLoop\Internal\{closure}()<br>
+AbstractDriver.php(94):	start()<br>
+DriverSuspension.php(117):	Revolt\EventLoop\Internal\{closure}()<br>
+Future.php(251):    	suspend()<br>
+API.php(307):       	await({})<br>
+API.php(194):       	connectToMadelineProto({})<br>
+index.php(59):      	__construct("session.madeline",{})
+Serialization:  	MadelineProto is starting, please wait...
+Serialization:  	Connected to IPC socket!
+Server:         	IPC server started successfully!
+Login:          	Logging in as a normal user...
+Login:          	Logged in successfully!
+MTProto:        	Starting update system
+DialogHandler:  	Getting dialogs...
+FeedLoop:       	Resumed update feed loop generic
+MinDatabase:    	Found 281 pending contexts
+MinDatabase:    	Found 117 pending contexts
+GarbageCollector: 	gc_collect_cycles done. Cleaned memory: 0 Mb
+Session:        	Garbage collected 17 incoming messages in DC 2, 0 left
+Session:        	Garbage collected 21 outgoing messages in DC 2, 0 left
+UpdateHandler:  	Parsing updates (updateShort) received via the socket...
+UpdateHandler:  	Parsing updates (updateShort) received via the socket...
+FeedLoop:       	Resumed update feed loop channel 1558081175
+FeedLoop:       	Resumed update feed loop generic
+UpdateHandler:  	Saving update of type updateMessagePoll
+UpdateHandler:  	Parsing updates (updateShort) received via the socket...
+FeedLoop:       	Resumed update feed loop generic
+UpdateHandler:  	Saving update of type updateUserStatus
+UpdateHandler:  	Parsing updates (updates) received via the socket...
+SeqLoop:        	Was fed updates of type updates...
+FeedLoop:       	Resumed update feed loop channel 1307866449
+FeedLoop:       	Resumed update feed loop channel 1558081175
+FeedLoop:       	Got channel too long update, getting difference...
+PingLoop:       	Ping DC 2.0
+Session:        	Garbage collected 18 incoming messages in DC 2, 0 left
+Session:        	Garbage collected 15 outgoing messages in DC 2, 1 left
+SessionPaths:   	Waiting for exclusive lock of /var/www/html/session.madeline/safe.php.lock...
+SessionPaths:   	Got exclusive lock of /var/www/html/session.madeline/safe.php.lock...
+SessionPaths:   	Waiting for exclusive lock of /var/www/html/session.madeline/lightState.php.lock...
+SessionPaths:   	Got exclusive lock of /var/www/html/session.madeline/lightState.php.lock...
+APIWrapper:     	Saved session!
+UpdateHandler:  	Parsing updates (updates) received via the socket...
+SeqLoop:        	Was fed updates of type updates...
+FeedLoop:       	Resumed update feed loop channel 1558081175
+UpdateHandler:  	Saving update of type updateNewChannelMessage
+Session:        	Garbage collected 11 incoming messages in DC 2, 0 left
+Session:        	Garbage collected 13 outgoing messages in DC 2, 0 left
+FeedLoop:       	Resumed update feed loop channel 1558081175
+UpdateHandler:  	Parsing updates (updateShort) received via the socket...
+FeedLoop:       	Resumed update feed loop generic
+UpdateHandler:  	Saving update of type updateUserStatus
+Session:        	Garbage collected 11 incoming messages in DC 2, 0 left
+Session:        	Garbage collected 11 outgoing messages in DC 2, 0 left
+UpdateHandler:  	Parsing updates (updates) received via the socket...
+SeqLoop:        	Was fed updates of type updates...
+FeedLoop:       	Resumed update feed loop channel 1558081175
+UpdateHandler:  	Saving update of type updateNewChannelMessage
+FeedLoop:       	Resumed update feed loop channel 1558081175
+Session:        	Garbage collected 9 incoming messages in DC 2, 0 left
+Session:        	Garbage collected 10 outgoing messages in DC 2, 0 left
+SessionPaths:   	Waiting for exclusive lock of /var/www/html/session.madeline/safe.php.lock...
+SessionPaths:   	Got exclusive lock of /var/www/html/session.madeline/safe.php.lock...
+SessionPaths:   	Waiting for exclusive lock of /var/www/html/session.madeline/lightState.php.lock...
+SessionPaths:   	Got exclusive lock of /var/www/html/session.madeline/lightState.php.lock...
+APIWrapper:     	Saved session!
+UpdateHandler:  	Parsing updates (updateShort) received via the socket...
+FeedLoop:       	Resumed update feed loop generic
+UpdateHandler:  	Saving update of type updateMessagePoll
+UpdateHandler:  	Parsing updates (updates) received via the socket...
+SeqLoop:        	Was fed updates of type updates...
+FeedLoop:       	Resumed update feed loop channel 1558081175
+UpdateHandler:  	Saving update of type updateNewChannelMessage
+Session:        	Garbage collected 13 incoming messages in DC 2, 0 left
+Session:        	Garbage collected 8 outgoing messages in DC 2, 1 left
+FeedLoop:       	Resumed update feed loop channel 1558081175
+Session:        	Garbage collected 12 incoming messages in DC 2, 0 left
+Session:        	Garbage collected 18 outgoing messages in DC 2, 1 left
+UpdateHandler:  	Parsing updates (updateShort) received via the socket...
+FeedLoop:       	Resumed update feed loop generic
+UpdateHandler:  	Saving update of type updateMessagePoll
+UpdateHandler:  	Parsing updates (updates) received via the socket...
+SeqLoop:        	Was fed updates of type updates...
+FeedLoop:       	Resumed update feed loop channel 1307866449
+UpdateHandler:  	Saving update of type updateEditChannelMessage
+PingLoop:       	Ping DC 2.0
+Session:        	Garbage collected 18 incoming messages in DC 2, 0 left
+Session:        	Garbage collected 20 outgoing messages in DC 2, 2 left
+SessionPaths:   	Waiting for exclusive lock of /var/www/html/session.madeline/safe.php.lock...
+SessionPaths:   	Got exclusive lock of /var/www/html/session.madeline/safe.php.lock...
+SessionPaths:   	Waiting for exclusive lock of /var/www/html/session.madeline/lightState.php.lock...
+SessionPaths:   	Got exclusive lock of /var/www/html/session.madeline/lightState.php.lock...
+APIWrapper:     	Saved session!
+UpdateHandler:  	Parsing updates (updateShort) received via the socket...
+FeedLoop:       	Resumed update feed loop generic
+UpdateHandler:  	Saving update of type updateMessagePoll
+Session:        	Garbage collected 17 incoming messages in DC 2, 0 left
+Session:        	Garbage collected 20 outgoing messages in DC 2, 0 left
+Session:        	Garbage collected 11 incoming messages in DC 2, 0 left
+Session:        	Garbage collected 16 outgoing messages in DC 2, 0 left
+UpdateHandler:  	Parsing updates (updateShort) received via the socket...
+FeedLoop:       	Resumed update feed loop generic
+UpdateHandler:  	Saving update of type updateMessagePoll
+UpdateHandler:  	Parsing updates (updates) received via the socket...
+SeqLoop:        	Was fed updates of type updates...
+FeedLoop:       	Resumed update feed loop channel 1307866449
+UpdateHandler:  	Saving update of type updateEditChannelMessage
+Session:        	Garbage collected 13 incoming messages in DC 2, 0 left
+Session:        	Garbage collected 12 outgoing messages in DC 2, 0 left
+SessionPaths:   	Waiting for exclusive lock of /var/www/html/session.madeline/safe.php.lock...
+SessionPaths:   	Got exclusive lock of /var/www/html/session.madeline/safe.php.lock...
+SessionPaths:   	Waiting for exclusive lock of /var/www/html/session.madeline/lightState.php.lock...
+SessionPaths:   	Got exclusive lock of /var/www/html/session.madeline/lightState.php.lock...
+APIWrapper:     	Saved session!
+Session:        	Garbage collected 8 incoming messages in DC 2, 0 left
+Session:        	Garbage collected 10 outgoing messages in DC 2, 0 left
+UpdateHandler:  	Parsing updates (updateShort) received via the socket...
+FeedLoop:       	Resumed update feed loop generic
+UpdateHandler:  	Saving update of type updateUserStatus
+UpdateHandler:  	Parsing updates (updatesTooLong) received via the socket...
+UpdateHandler:  	Parsing updates (updates) received via the socket...
+SeqLoop:        	Was fed updates of type updates...
+SeqLoop:        	Seq hole. seq_start: 102 != cur seq: 2
+ResponseHandler: 	Auth key not registered in DC 2 with RPC error AUTH_KEY_UNREGISTERED, resetting temporary and permanent auth keys...
+ResponseHandler: 	Permanent auth key was main authorized key, logging out...
+ResponseHandler: 	!!!!!!! WARNING !!!!!!!
+Telegram's flood prevention system suspended this account.
+To continue, manual verification is required.
+Send an email to recover@telegram.org, asking to unban the phone number +380664120696, and shortly describe what will you do with this phone number.
+Then login again.
+If you intentionally deleted this account, ignore this message.
+Session:        	Garbage collected 5 incoming messages in DC 2, 0 left
+Session:        	Can't garbage collect updates.getDifference with message ID 7347737042480550784 sent 6 seconds ago in DC 2, no response has been received or it wasn't yet handled!
+Session:        	Garbage collected 3 outgoing messages in DC 2, 1 left
+Session:        	Can't garbage collect updates.getDifference with message ID 7347737042480550784 sent 16 seconds ago in DC 2, no response has been received or it wasn't yet handled!
+Session:        	Garbage collected 0 outgoing messages in DC 2, 1 left
+Session:        	Can't garbage collect updates.getDifference with message ID 7347737042480550784 sent 26 seconds ago in DC 2, no response has been received or it wasn't yet handled!
+Session:        	Garbage collected 0 outgoing messages in DC 2, 1 left
+Session:        	Can't garbage collect updates.getDifference with message ID 7347737042480550784 sent 36 seconds ago in DC 2, no response has been received or it wasn't yet handled!
+Session:        	Garbage collected 0 outgoing messages in DC 2, 1 left
+Session:        	Can't garbage collect updates.getDifference with message ID 7347737042480550784 sent 46 seconds ago in DC 2, no response has been received or it wasn't yet handled!
+Session:        	Garbage collected 0 outgoing messages in DC 2, 1 left
+Session:        	Can't garbage collect updates.getDifference with message ID 7347737042480550784 sent 56 seconds ago in DC 2, no response has been received or it wasn't yet handled!
+Session:        	Garbage collected 0 outgoing messages in DC 2, 1 left
+Session:        	Can't garbage collect updates.getDifference with message ID 7347737042480550784 sent 66 seconds ago in DC 2, no response has been received or it wasn't yet handled!
+Session:        	Garbage collected 0 outgoing messages in DC 2, 1 left
+Session:        	Can't garbage collect updates.getDifference with message ID 7347737042480550784 sent 76 seconds ago in DC 2, no response has been received or it wasn't yet handled!
+Session:        	Garbage collected 0 outgoing messages in DC 2, 1 left
+Session:        	Can't garbage collect updates.getDifference with message ID 7347737042480550784 sent 86 seconds ago in DC 2, no response has been received or it wasn't yet handled!
+Session:        	Garbage collected 0 outgoing messages in DC 2, 1 left
+Session:        	Can't garbage collect updates.getDifference with message ID 7347737042480550784 sent 96 seconds ago in DC 2, no response has been received or it wasn't yet handled!
+Session:        	Garbage collected 0 outgoing messages in DC 2, 1 left
+Session:        	Can't garbage collect updates.getDifference with message ID 7347737042480550784 sent 106 seconds ago in DC 2, no response has been received or it wasn't yet handled!
+Session:        	Garbage collected 0 outgoing messages in DC 2, 1 left
+Session:        	Can't garbage collect updates.getDifference with message ID 7347737042480550784 sent 116 seconds ago in DC 2, no response has been received or it wasn't yet handled!
+Session:        	Garbage collected 0 outgoing messages in DC 2, 1 left
+Session:        	Can't garbage collect updates.getDifference with message ID 7347737042480550784 sent 126 seconds ago in DC 2, no response has been received or it wasn't yet handled!
+Session:        	Garbage collected 0 outgoing messages in DC 2, 1 left
+Session:        	Can't garbage collect updates.getDifference with message ID 7347737042480550784 sent 136 seconds ago in DC 2, no response has been received or it wasn't yet handled!
+Session:        	Garbage collected 0 outgoing messages in DC 2, 1 left
+Session:        	Can't garbage collect updates.getDifference with message ID 7347737042480550784 sent 146 seconds ago in DC 2, no response has been received or it wasn't yet handled!
+Session:        	Garbage collected 0 outgoing messages in DC 2, 1 left
+Session:        	Can't garbage collect updates.getDifference with message ID 7347737042480550784 sent 156 seconds ago in DC 2, no response has been received or it wasn't yet handled!
+Session:        	Garbage collected 0 outgoing messages in DC 2, 1 left
+Session:        	Can't garbage collect updates.getDifference with message ID 7347737042480550784 sent 166 seconds ago in DC 2, no response has been received or it wasn't yet handled!
+Session:        	Garbage collected 0 outgoing messages in DC 2, 1 left
+Session:        	Can't garbage collect updates.getDifference with message ID 7347737042480550784 sent 176 seconds ago in DC 2, no response has been received or it wasn't yet handled!
+Session:        	Garbage collected 0 outgoing messages in DC 2, 1 left
+Session:        	Can't garbage collect updates.getDifference with message ID 7347737042480550784 sent 186 seconds ago in DC 2, no response has been received or it wasn't yet handled!
+Session:        	Garbage collected 0 outgoing messages in DC 2, 1 left
+Session:        	Can't garbage collect updates.getDifference with message ID 7347737042480550784 sent 196 seconds ago in DC 2, no response has been received or it wasn't yet handled!
+Session:        	Garbage collected 0 outgoing messages in DC 2, 1 left
+Session:        	Can't garbage collect updates.getDifference with message ID 7347737042480550784 sent 206 seconds ago in DC 2, no response has been received or it wasn't yet handled!
+Session:        	Garbage collected 0 outgoing messages in DC 2, 1 left
+Session:        	Can't garbage collect updates.getDifference with message ID 7347737042480550784 sent 216 seconds ago in DC 2, no response has been received or it wasn't yet handled!
+Session:        	Garbage collected 0 outgoing messages in DC 2, 1 left
+Session:        	Can't garbage collect updates.getDifference with message ID 7347737042480550784 sent 226 seconds ago in DC 2, no response has been received or it wasn't yet handled!
+Session:        	Garbage collected 0 outgoing messages in DC 2, 1 left
+Session:        	Can't garbage collect updates.getDifference with message ID 7347737042480550784 sent 236 seconds ago in DC 2, no response has been received or it wasn't yet handled!
+Session:        	Garbage collected 0 outgoing messages in DC 2, 1 left
+Session:        	Can't garbage collect updates.getDifference with message ID 7347737042480550784 sent 246 seconds ago in DC 2, no response has been received or it wasn't yet handled!
+Session:        	Garbage collected 0 outgoing messages in DC 2, 1 left
+Session:        	Can't garbage collect updates.getDifference with message ID 7347737042480550784 sent 256 seconds ago in DC 2, no response has been received or it wasn't yet handled!
+Session:        	Garbage collected 0 outgoing messages in DC 2, 1 left
+Logger:         	MadelineProto 8.0.0-beta194
+Logger:         	Copyright (C) 2016-2024 Daniil Gentili
+Logger:         	Licensed under AGPLv3
+Logger:         	https://github.com/danog/MadelineProto
+Logger:         	MadelineProto 8.0.0-beta194
+Logger:         	Copyright (C) 2016-2024 Daniil Gentili
+Logger:         	Licensed under AGPLv3
+Logger:         	https://github.com/danog/MadelineProto
+Serialization:  	Got exclusive session lock!
+DataCenter, SergeySvist:     	Acquiring connect lock for 2!
+DataCenter, SergeySvist:     	Connecting to DC 2
+DataCenterConnection, SergeySvist: 	Restoring 0 messages to DC 2
+Session, SergeySvist:        	Resetting session in DC 2.0...
+Connection, SergeySvist:     	Connecting to DC 2.0 via tcp://149.154.167.41:443 main DC 2, via ipv4 using AbridgedStream => BufferedRawStream => DefaultStream 
+GarbageCollector, SergeySvist: 	gc_collect_cycles done. Cleaned memory: 0 Mb
+Connection, SergeySvist:     	Connected to DC 2.0 via tcp://149.154.167.41:443 main DC 2, via ipv4 using AbridgedStream => BufferedRawStream => DefaultStream!
+DataCenterConnection, SergeySvist: 	Acquiring lock in order to init auth for DC 2
+DataCenterConnection, SergeySvist: 	Initing auth for DC 2
+DataCenterConnection, SergeySvist: 	Done initing auth for DC 2
+Session, SergeySvist:        	Garbage collected 0 outgoing messages in DC 2, 1 left
+PingLoop, SergeySvist:       	Ping DC 2.0
+ResponseHandler, SergeySvist: 	Received bad_msg_notification: incorrect server salt (in this case, the bad_server_salt response is received with the correct salt, and the message is to be re-sent with it)
+ResponseHandler, SergeySvist: 	Received bad_msg_notification: incorrect server salt (in this case, the bad_server_salt response is received with the correct salt, and the message is to be re-sent with it)
+ResponseHandler, SergeySvist: 	Auth key not registered in DC 2 with RPC error AUTH_KEY_UNREGISTERED, resetting temporary and permanent auth keys...
+ResponseHandler, SergeySvist: 	Permanent auth key was main authorized key, logging out...
+ResponseHandler, SergeySvist: 	!!!!!!! WARNING !!!!!!!
+Telegram's flood prevention system suspended this account.
+To continue, manual verification is required.
+Send an email to recover@telegram.org, asking to unban the phone number +380664120696, and shortly describe what will you do with this phone number.
+Then login again.
+If you intentionally deleted this account, ignore this message.
+Session, SergeySvist:        	Garbage collected 7 incoming messages in DC 2, 0 left
+Session, SergeySvist:        	Can't garbage collect users.getUsers with message ID 7348059547279577200 sent 10 seconds ago in DC 2, no response has been received or it wasn't yet handled!
+Session, SergeySvist:        	Garbage collected 3 outgoing messages in DC 2, 1 left
+Logger:         	MadelineProto 8.0.0-beta194
+Logger:         	Copyright (C) 2016-2024 Daniil Gentili
+Logger:         	Licensed under AGPLv3
+Logger:         	https://github.com/danog/MadelineProto
+Serialization:  	Got exclusive session lock!
+DataCenter, SergeySvist:     	Acquiring connect lock for 2!
+DataCenter, SergeySvist:     	Connecting to DC 2
+DataCenterConnection, SergeySvist: 	Restoring 0 messages to DC 2
+Session, SergeySvist:        	Resetting session in DC 2.0...
+Connection, SergeySvist:     	Connecting to DC 2.0 via tcp://149.154.167.41:443 main DC 2, via ipv4 using AbridgedStream => BufferedRawStream => DefaultStream 
+Connection, SergeySvist:     	Connected to DC 2.0 via tcp://149.154.167.41:443 main DC 2, via ipv4 using AbridgedStream => BufferedRawStream => DefaultStream!
+DataCenterConnection, SergeySvist: 	Acquiring lock in order to init auth for DC 2
+DataCenterConnection, SergeySvist: 	Initing auth for DC 2
+DataCenterConnection, SergeySvist: 	Done initing auth for DC 2
+Session, SergeySvist:        	Garbage collected 0 outgoing messages in DC 2, 1 left
+PingLoop, SergeySvist:       	Ping DC 2.0
+MTProto, SergeySvist:        	Starting update system
+MTProto, SergeySvist:        	Obtaining updates after deserialization...
+APIWrapper, SergeySvist:     	MadelineProto is ready!
+SessionPaths, SergeySvist:   	Waiting for exclusive lock of C:\xampp\htdocs\First\TelegramChatsParser\session.madeline\ipcState.php.lock...
+SessionPaths, SergeySvist:   	Got exclusive lock of C:\xampp\htdocs\First\TelegramChatsParser\session.madeline\ipcState.php.lock...
+FeedLoop, SergeySvist:       	Resumed update feed loop generic
+GarbageCollector, SergeySvist: 	gc_collect_cycles done. Cleaned memory: 0 Mb
+Session, SergeySvist:        	Garbage collected 16 incoming messages in DC 2, 0 left
+Session, SergeySvist:        	Garbage collected 16 outgoing messages in DC 2, 0 left
+UpdateHandler, SergeySvist:  	Parsing updates (updates) received via the socket...
+SeqLoop, SergeySvist:        	Was fed updates of type updates...
+FeedLoop, SergeySvist:       	Resumed update feed loop channel 1757089925
+MinDatabase, SergeySvist:    	Don't have origin info with min peer -1001757089925, this may fail
+FeedLoop, SergeySvist:       	Resumed update feed loop channel 1757089925
+UpdateLoop, SergeySvist:     	Channel private, exiting getUpdate loop channel 1757089925
+UpdateHandler, SergeySvist:  	Parsing updates (updateShort) received via the socket...
+FeedLoop, SergeySvist:       	Resumed update feed loop generic
+UpdateHandler, SergeySvist:  	Saving update of type updateUserStatus
+Session, SergeySvist:        	Garbage collected 6 incoming messages in DC 2, 0 left
+Session, SergeySvist:        	Garbage collected 4 outgoing messages in DC 2, 0 left
+UpdateHandler, SergeySvist:  	Parsing updates (updateShort) received via the socket...
+UpdateHandler, SergeySvist:  	Parsing updates (updates) received via the socket...
+SeqLoop, SergeySvist:        	Was fed updates of type updates...
+FeedLoop, SergeySvist:       	Resumed update feed loop generic
+UpdateHandler, SergeySvist:  	Saving update of type updateUserStatus
+FeedLoop, SergeySvist:       	Resumed update feed loop channel 1757089925
+FeedLoop, SergeySvist:       	Resumed update feed loop channel 1757089925
+Logger:         	MadelineProto 8.0.0-beta194
+Logger:         	Copyright (C) 2016-2024 Daniil Gentili
+Logger:         	Licensed under AGPLv3
+Logger:         	https://github.com/danog/MadelineProto
+Serialization:  	Got exclusive session lock!
+DataCenter, SergeySvist:     	Acquiring connect lock for 2!
+DataCenter, SergeySvist:     	Connecting to DC 2
+DataCenterConnection, SergeySvist: 	Restoring 0 messages to DC 2
+Session, SergeySvist:        	Resetting session in DC 2.0...
+Connection, SergeySvist:     	Connecting to DC 2.0 via tcp://149.154.167.41:443 main DC 2, via ipv4 using AbridgedStream => BufferedRawStream => DefaultStream 
+Connection, SergeySvist:     	Connected to DC 2.0 via tcp://149.154.167.41:443 main DC 2, via ipv4 using AbridgedStream => BufferedRawStream => DefaultStream!
+DataCenterConnection, SergeySvist: 	Acquiring lock in order to init auth for DC 2
+DataCenterConnection, SergeySvist: 	Initing auth for DC 2
+DataCenterConnection, SergeySvist: 	Done initing auth for DC 2
+Session, SergeySvist:        	Garbage collected 0 outgoing messages in DC 2, 1 left
+PingLoop, SergeySvist:       	Ping DC 2.0
+MTProto, SergeySvist:        	Starting update system
+MTProto, SergeySvist:        	Obtaining updates after deserialization...
+APIWrapper, SergeySvist:     	MadelineProto is ready!
+SessionPaths, SergeySvist:   	Waiting for exclusive lock of C:\xampp\htdocs\First\TelegramChatsParser\session.madeline\ipcState.php.lock...
+SessionPaths, SergeySvist:   	Got exclusive lock of C:\xampp\htdocs\First\TelegramChatsParser\session.madeline\ipcState.php.lock...
+FeedLoop, SergeySvist:       	Resumed update feed loop generic
+FeedLoop, SergeySvist:       	Resumed update feed loop channel 1764189517
+FeedLoop, SergeySvist:       	Got channel too long update, getting difference...
+FeedLoop, SergeySvist:       	Resumed update feed loop channel 1757089925
+FeedLoop, SergeySvist:       	Got channel too long update, getting difference...
+FeedLoop, SergeySvist:       	Resumed update feed loop channel 1689250492
+FeedLoop, SergeySvist:       	Got channel too long update, getting difference...
+FeedLoop, SergeySvist:       	Resumed update feed loop channel 1199360700
+FeedLoop, SergeySvist:       	Got channel too long update, getting difference...
+FeedLoop, SergeySvist:       	Resumed update feed loop channel 1319040000
+FeedLoop, SergeySvist:       	Got channel too long update, getting difference...
+FeedLoop, SergeySvist:       	Resumed update feed loop channel 1436417093
+FeedLoop, SergeySvist:       	Got channel too long update, getting difference...
+FeedLoop, SergeySvist:       	Resumed update feed loop channel 1386375324
+FeedLoop, SergeySvist:       	Got channel too long update, getting difference...
+FeedLoop, SergeySvist:       	Resumed update feed loop channel 1336951742
+FeedLoop, SergeySvist:       	Got channel too long update, getting difference...
+FeedLoop, SergeySvist:       	Resumed update feed loop channel 1848947632
+FeedLoop, SergeySvist:       	Got channel too long update, getting difference...
+FeedLoop, SergeySvist:       	Resumed update feed loop channel 1581188885
+FeedLoop, SergeySvist:       	Got channel too long update, getting difference...
+FeedLoop, SergeySvist:       	Resumed update feed loop channel 1558081175
+FeedLoop, SergeySvist:       	Got channel too long update, getting difference...
+FeedLoop, SergeySvist:       	Resumed update feed loop channel 1312633993
+FeedLoop, SergeySvist:       	Got channel too long update, getting difference...
+FeedLoop, SergeySvist:       	Resumed update feed loop channel 1307866449
+FeedLoop, SergeySvist:       	Got channel too long update, getting difference...
+FeedLoop, SergeySvist:       	Resumed update feed loop generic
+UpdateHandler, SergeySvist:  	Saving update of type updateReadChannelInbox
+FeedLoop, SergeySvist:       	Resumed update feed loop channel 1307866449
+UpdateHandler, SergeySvist:  	Saving update of type updateEditChannelMessage
+GarbageCollector, SergeySvist: 	gc_collect_cycles done. Cleaned memory: 0 Mb
+UpdateHandler, SergeySvist:  	Parsing updates (updateShort) received via the socket...
+FeedLoop, SergeySvist:       	Resumed update feed loop generic
+UpdateHandler, SergeySvist:  	Saving update of type updateUserStatus
+UpdateHandler, SergeySvist:  	Parsing updates (updateShort) received via the socket...
+FeedLoop, SergeySvist:       	Resumed update feed loop generic
+UpdateHandler, SergeySvist:  	Saving update of type updateUserStatus
+UpdateHandler, SergeySvist:  	Parsing updates (updateShort) received via the socket...
+FeedLoop, SergeySvist:       	Resumed update feed loop generic
+UpdateHandler, SergeySvist:  	Saving update of type updateUserStatus
+Session, SergeySvist:        	Garbage collected 25 incoming messages in DC 2, 0 left
+Session, SergeySvist:        	Garbage collected 20 outgoing messages in DC 2, 0 left
+MinDatabase, SergeySvist:    	Found 1 pending contexts
+UpdateHandler, SergeySvist:  	Parsing updates (updateShort) received via the socket...
+FeedLoop, SergeySvist:       	Resumed update feed loop generic
+UpdateHandler, SergeySvist:  	Saving update of type updateChannelUserTyping
+Logger:         	MadelineProto 8.0.0-beta194
+Logger:         	Copyright (C) 2016-2024 Daniil Gentili
+Logger:         	Licensed under AGPLv3
+Logger:         	https://github.com/danog/MadelineProto
+Logger:         	MadelineProto 8.0.0-beta194
+Logger:         	Copyright (C) 2016-2024 Daniil Gentili
+Logger:         	Licensed under AGPLv3
+Logger:         	https://github.com/danog/MadelineProto
+Serialization:  	Got exclusive session lock!
+MTProto, SergeySvist:        	Generic settings have changed!
+MTProto, SergeySvist:        	Serialization is out of date, reconstructing object!
+TL, SergeySvist:             	Loading TL schemes...
+TL, SergeySvist:             	Parsing TL_telegram_v174.tl...
+TL, SergeySvist:             	Parsing TL_mtproto_v1.tl...
+TL, SergeySvist:             	Parsing TL_secret.tl...
+DataCenter, SergeySvist:     	Acquiring connect lock for 2!
+DataCenter, SergeySvist:     	Connecting to DC 2
+DataCenterConnection, SergeySvist: 	Restoring 0 messages to DC 2
+Session, SergeySvist:        	Resetting session in DC 2.0...
+Connection, SergeySvist:     	Connecting to DC 2.0 via tcp://149.154.167.41:443 main DC 2, via ipv4 using AbridgedStream => BufferedRawStream => DefaultStream 
+Connection, SergeySvist:     	Connected to DC 2.0 via tcp://149.154.167.41:443 main DC 2, via ipv4 using AbridgedStream => BufferedRawStream => DefaultStream!
+DataCenterConnection, SergeySvist: 	Acquiring lock in order to init auth for DC 2
+DataCenterConnection, SergeySvist: 	Initing auth for DC 2
+DataCenterConnection, SergeySvist: 	Generating temporary authorization key for DC 2...
+AuthKeyHandler, SergeySvist: 	Requesting pq...
+GarbageCollector, SergeySvist: 	gc_collect_cycles done. Cleaned memory: 0 Mb
+Session, SergeySvist:        	Garbage collected 0 outgoing messages in DC 2, 1 left
+ResponseHandler, SergeySvist: 	Trying to assign a response of type ResPQ to its request...
+ResponseHandler, SergeySvist: 	Does the request of return type ResPQ match?
+ResponseHandler, SergeySvist: 	Yes
+AuthKeyHandler, SergeySvist: 	Factorizing with native_single_cpp (please wait, might take a while)
+AuthKeyHandler, SergeySvist: 	Factorizing with python_single_alt (please wait, might take a while)
+AuthKeyHandler, SergeySvist: 	Install https://prime.madelineproto.xyz and the FFI extension to speed this up!
+AuthKeyHandler, SergeySvist: 	Factorizing with python_single (please wait, might take a while)
+AuthKeyHandler, SergeySvist: 	Install https://prime.madelineproto.xyz and the FFI extension to speed this up!
+AuthKeyHandler, SergeySvist: 	Factorizing with native_single (please wait, might take a while)
+AuthKeyHandler, SergeySvist: 	Install https://prime.madelineproto.xyz and the FFI extension to speed this up!
+AuthKeyHandler, SergeySvist: 	Factorization 1227937890143532413 = 1092208903 * 1124270171
+AuthKeyHandler, SergeySvist: 	Starting Diffie Hellman key exchange
+ResponseHandler, SergeySvist: 	Trying to assign a response of type Server_DH_Params to its request...
+ResponseHandler, SergeySvist: 	Does the request of return type Server_DH_Params match?
+ResponseHandler, SergeySvist: 	Yes
+AuthKeyHandler, SergeySvist: 	Server-client time delta = 3.0 s
+Crypt, SergeySvist:          	Executing p/g checks (1/2)...
+Crypt, SergeySvist:          	Executing p/g checks (2/2)...
+Crypt, SergeySvist:          	Executing g check...
+Crypt, SergeySvist:          	Executing g_a check (1/2)...
+Crypt, SergeySvist:          	Executing g_a check (2/2)...
+AuthKeyHandler, SergeySvist: 	Generating b...
+AuthKeyHandler, SergeySvist: 	Generating g_b...
+Crypt, SergeySvist:          	Executing g_a check (1/2)...
+Crypt, SergeySvist:          	Executing g_a check (2/2)...
+AuthKeyHandler, SergeySvist: 	Executing g_b check...
+AuthKeyHandler, SergeySvist: 	Preparing client_DH_inner_data...
+AuthKeyHandler, SergeySvist: 	Executing set_client_DH_params...
+ResponseHandler, SergeySvist: 	Trying to assign a response of type Set_client_DH_params_answer to its request...
+ResponseHandler, SergeySvist: 	Does the request of return type Set_client_DH_params_answer match?
+ResponseHandler, SergeySvist: 	Yes
+AuthKeyHandler, SergeySvist: 	Generating authorization key (install gmp to speed up this process)...
+AuthKeyHandler, SergeySvist: 	Diffie Hellman key exchange processed successfully!
+AuthKeyHandler, SergeySvist: 	Auth key generated
+DataCenterConnection, SergeySvist: 	Binding authorization keys...
+WriteLoop, SergeySvist:      	Skipping help.getConfig pending due to unbound keys in DC 2.0
+WriteLoop, SergeySvist:      	Skipping help.getConfig pending due to unbound keys in DC 2.0
+DataCenterConnection, SergeySvist: 	Bound temporary and permanent authorization keys, DC 2
+WriteLoop, SergeySvist:      	Writing client info (also executing help.getConfig)...
+WriteLoop, SergeySvist:      	Writing client info (also executing help.getConfig)...
+WriteLoop, SergeySvist:      	Writing client info (also executing help.getConfig)...
+MTProto, SergeySvist:        	Updated config!
+MTProto, SergeySvist:        	Updated config!
+MTProto, SergeySvist:        	Starting update system
+FeedLoop, SergeySvist:       	Resumed update feed loop generic
+DataCenterConnection, SergeySvist: 	Done initing auth for DC 2
+PingLoop, SergeySvist:       	Ping DC 2.0
+FeedLoop, SergeySvist:       	Resumed update feed loop channel 1764189517
+FeedLoop, SergeySvist:       	Got channel too long update, getting difference...
+FeedLoop, SergeySvist:       	Resumed update feed loop channel 1757089925
+FeedLoop, SergeySvist:       	Got channel too long update, getting difference...
+FeedLoop, SergeySvist:       	Resumed update feed loop channel 1689250492
+FeedLoop, SergeySvist:       	Got channel too long update, getting difference...
+FeedLoop, SergeySvist:       	Resumed update feed loop channel 1199360700
+FeedLoop, SergeySvist:       	Got channel too long update, getting difference...
+FeedLoop, SergeySvist:       	Resumed update feed loop channel 1319040000
+FeedLoop, SergeySvist:       	Got channel too long update, getting difference...
+FeedLoop, SergeySvist:       	Resumed update feed loop channel 1436417093
+FeedLoop, SergeySvist:       	Got channel too long update, getting difference...
+FeedLoop, SergeySvist:       	Resumed update feed loop channel 1386375324
+FeedLoop, SergeySvist:       	Got channel too long update, getting difference...
+FeedLoop, SergeySvist:       	Resumed update feed loop channel 1336951742
+FeedLoop, SergeySvist:       	Got channel too long update, getting difference...
+FeedLoop, SergeySvist:       	Resumed update feed loop channel 1848947632
+FeedLoop, SergeySvist:       	Got channel too long update, getting difference...
+FeedLoop, SergeySvist:       	Resumed update feed loop channel 1581188885
+FeedLoop, SergeySvist:       	Got channel too long update, getting difference...
+FeedLoop, SergeySvist:       	Resumed update feed loop channel 1558081175
+FeedLoop, SergeySvist:       	Got channel too long update, getting difference...
+FeedLoop, SergeySvist:       	Resumed update feed loop channel 1312633993
+FeedLoop, SergeySvist:       	Got channel too long update, getting difference...
+FeedLoop, SergeySvist:       	Resumed update feed loop channel 1307866449
+FeedLoop, SergeySvist:       	Got channel too long update, getting difference...
+FeedLoop, SergeySvist:       	Resumed update feed loop generic
+UpdateHandler, SergeySvist:  	Saving update of type updateReadChannelInbox
+FeedLoop, SergeySvist:       	Resumed update feed loop channel 1307866449
+UpdateHandler, SergeySvist:  	Saving update of type updateEditChannelMessage
+MTProto, SergeySvist:        	Starting update system
+MTProto, SergeySvist:        	Obtaining updates after deserialization...
+APIWrapper, SergeySvist:     	MadelineProto is ready!
+SessionPaths, SergeySvist:   	Waiting for exclusive lock of /var/www/html/session.madeline/ipcState.php.lock...
+SessionPaths, SergeySvist:   	Got exclusive lock of /var/www/html/session.madeline/ipcState.php.lock...
+FeedLoop, SergeySvist:       	Resumed update feed loop generic
+FeedLoop, SergeySvist:       	Resumed update feed loop channel 1199360700
+FeedLoop, SergeySvist:       	Resumed update feed loop channel 1307866449
+FeedLoop, SergeySvist:       	Resumed update feed loop channel 1312633993
+FeedLoop, SergeySvist:       	Resumed update feed loop channel 1319040000
+FeedLoop, SergeySvist:       	Resumed update feed loop channel 1336951742
+FeedLoop, SergeySvist:       	Resumed update feed loop channel 1386375324
+FeedLoop, SergeySvist:       	Resumed update feed loop channel 1436417093
+FeedLoop, SergeySvist:       	Resumed update feed loop channel 1558081175
+FeedLoop, SergeySvist:       	Resumed update feed loop channel 1581188885
+FeedLoop, SergeySvist:       	Resumed update feed loop channel 1689250492
+FeedLoop, SergeySvist:       	Resumed update feed loop channel 1757089925
+FeedLoop, SergeySvist:       	Resumed update feed loop channel 1764189517
+FeedLoop, SergeySvist:       	Resumed update feed loop channel 1848947632
+Session, SergeySvist:        	Garbage collected 46 incoming messages in DC 2, 0 left
+Session, SergeySvist:        	Garbage collected 42 outgoing messages in DC 2, 0 left
+UpdateHandler, SergeySvist:  	Parsing updates (updates) received via the socket...
+SeqLoop, SergeySvist:        	Was fed updates of type updates...
+UpdateHandler, SergeySvist:  	Parsing updates (updateShort) received via the socket...
+UpdateHandler, SergeySvist:  	Parsing updates (updateShort) received via the socket...
+UpdateHandler, SergeySvist:  	Parsing updates (updateShort) received via the socket...
+FeedLoop, SergeySvist:       	Resumed update feed loop channel 1307866449
+FeedLoop, SergeySvist:       	Resumed update feed loop generic
+UpdateHandler, SergeySvist:  	Saving update of type updateUserStatus
+FeedLoop, SergeySvist:       	Resumed update feed loop channel 1689250492
+UpdateHandler, SergeySvist:  	Saving update of type updateDeleteChannelMessages
+UpdateHandler, SergeySvist:  	Saving update of type updateDeleteChannelMessages
+FeedLoop, SergeySvist:       	Resumed update feed loop channel 1307866449
+UpdateHandler, SergeySvist:  	Saving update of type updateEditChannelMessage
+UpdateHandler, SergeySvist:  	Parsing updates (updateShort) received via the socket...
+FeedLoop, SergeySvist:       	Resumed update feed loop generic
+UpdateHandler, SergeySvist:  	Saving update of type updateUserStatus
+UpdateHandler, SergeySvist:  	Parsing updates (updateShort) received via the socket...
+FeedLoop, SergeySvist:       	Resumed update feed loop generic
+UpdateHandler, SergeySvist:  	Saving update of type updateUserStatus
+MinDatabase, SergeySvist:    	Found 1 pending contexts
+UpdateHandler, SergeySvist:  	Parsing updates (updateShort) received via the socket...
+FeedLoop, SergeySvist:       	Resumed update feed loop generic
+UpdateHandler, SergeySvist:  	Saving update of type updateChannelUserTyping
+UpdateHandler, SergeySvist:  	Parsing updates (updates) received via the socket...
+SeqLoop, SergeySvist:        	Was fed updates of type updates...
+FeedLoop, SergeySvist:       	Resumed update feed loop channel 1307866449
+Session, SergeySvist:        	Garbage collected 27 incoming messages in DC 2, 0 left
+Session, SergeySvist:        	Garbage collected 15 outgoing messages in DC 2, 0 left
+UpdateHandler, SergeySvist:  	Parsing updates (updateShort) received via the socket...
+FeedLoop, SergeySvist:       	Resumed update feed loop generic
+UpdateHandler, SergeySvist:  	Saving update of type updateUserStatus
+SessionPaths, SergeySvist:   	Waiting for exclusive lock of /var/www/html/session.madeline/safe.php.lock...
+SessionPaths, SergeySvist:   	Got exclusive lock of /var/www/html/session.madeline/safe.php.lock...
+SessionPaths, SergeySvist:   	Waiting for exclusive lock of /var/www/html/session.madeline/lightState.php.lock...
+SessionPaths, SergeySvist:   	Got exclusive lock of /var/www/html/session.madeline/lightState.php.lock...
+APIWrapper, SergeySvist:     	Saved session!
+Session, SergeySvist:        	Garbage collected 19 incoming messages in DC 2, 0 left
+Session, SergeySvist:        	Garbage collected 15 outgoing messages in DC 2, 0 left
+FeedLoop, SergeySvist:       	Resumed update feed loop channel 1307866449
+UpdateHandler, SergeySvist:  	Saving update of type updateEditChannelMessage
+MinDatabase, SergeySvist:    	Found 3 pending contexts
+UpdateHandler, SergeySvist:  	Parsing updates (updateShort) received via the socket...
+UpdateHandler, SergeySvist:  	Parsing updates (updates) received via the socket...
+SeqLoop, SergeySvist:        	Was fed updates of type updates...
+FeedLoop, SergeySvist:       	Resumed update feed loop generic
+UpdateHandler, SergeySvist:  	Saving update of type updateChannelUserTyping
+UpdateHandler, SergeySvist:  	Parsing updates (updates) received via the socket...
+SeqLoop, SergeySvist:        	Was fed updates of type updates...
+FeedLoop, SergeySvist:       	Resumed update feed loop channel 1558081175
+UpdateHandler, SergeySvist:  	Saving update of type updateNewChannelMessage
+FeedLoop, SergeySvist:       	Resumed update feed loop channel 1307866449
+Session, SergeySvist:        	Garbage collected 28 incoming messages in DC 2, 0 left
+Session, SergeySvist:        	Garbage collected 18 outgoing messages in DC 2, 0 left
+FeedLoop, SergeySvist:       	Resumed update feed loop channel 1558081175
+UpdateHandler, SergeySvist:  	Parsing updates (updateShort) received via the socket...
+FeedLoop, SergeySvist:       	Resumed update feed loop generic
+UpdateHandler, SergeySvist:  	Saving update of type updateUserStatus
+MinDatabase, SergeySvist:    	Found 1 pending contexts
+UpdateHandler, SergeySvist:  	Parsing updates (updateShort) received via the socket...
+FeedLoop, SergeySvist:       	Resumed update feed loop generic
+UpdateHandler, SergeySvist:  	Saving update of type updateChannelUserTyping
+Server, SergeySvist:         	Accepted IPC client connection!
+Server:         	Starting IPC server /var/www/html/session.madeline (process)
+ProcessRunner:  	Starting process with '/usr/local/bin/php' '-dhtml_errors=0' '-ddisplay_errors=0' '-dlog_errors=1' '/var/www/html/vendor/danog/madelineproto/src/Ipc/Runner/entry.php' 'madeline-ipc' '/var/www/html/session.madeline' '901072835'
+Exception:      	fsockopen(): php_network_getaddresses: getaddrinfo for phpfpm.local failed: Temporary failure in name resolution in WebRunner.php:122
+WebRunner:      	Error while sending to tcp://phpfpm.local:80: \danog\MadelineProto\Exception: fsockopen(): php_network_getaddresses: getaddrinfo for phpfpm.local failed: Temporary failure in name resolution in /var/www/html/vendor/danog/madelineproto/src/Ipc/Runner/WebRunner.php:122
+Revision: 8.0.0-beta194
+TL Trace:
+<br>
+exceptionErrorHandler(2,"fsockopen(): php_network_getaddresses: getaddrinfo for phpfpm.local failed: Temporary failure in name resolution","\/var\/www\/html\/vendor\/danog\/madelineproto\/src\/Ipc\/Runner\/WebRunner.php",122)<br>
+WebRunner.php(122): 	fsockopen("tcp:\/\/phpfpm.local",80)<br>
+WebRunner.php(77):  	selfStart("\/vendor\/danog\/madelineproto\/src\/Ipc\/Runner\/entry.php?argv%5B0%5D=madeline-ipc&argv%5B1%5D=%2Fvar%2Fwww%2Fhtml%2Fsession.madeline&argv%5B2%5D=901072835&cwd=%2Fvar%2Fwww%2Fhtml&MadelineSelfRestart=1")<br>
+Server.php(110):    	start("\/var\/www\/html\/session.madeline",901072835)<br>
+Serialization.php(175):	startMe({})<br>
+AbstractDriver.php(425):	Amp\{closure}(null,null,[])<br>
+AbstractDriver.php(562):	invokeMicrotasks()<br>
+Revolt\EventLoop\Internal\{closure}()<br>
+AbstractDriver.php(498):	start()<br>
+AbstractDriver.php(537):	invokeCallbacks()<br>
+Revolt\EventLoop\Internal\{closure}()<br>
+AbstractDriver.php(94):	start()<br>
+DriverSuspension.php(117):	Revolt\EventLoop\Internal\{closure}()<br>
+Future.php(251):    	suspend()<br>
+API.php(307):       	await({})<br>
+API.php(194):       	connectToMadelineProto({})<br>
+index.php(56):      	__construct("session.madeline",{})
+Exception:      	fsockopen(): php_network_getaddresses: getaddrinfo for phpfpm.local failed: Temporary failure in name resolution in WebRunner.php:122
+WebRunner:      	Error while sending to tls://phpfpm.local:80: \danog\MadelineProto\Exception: fsockopen(): php_network_getaddresses: getaddrinfo for phpfpm.local failed: Temporary failure in name resolution in /var/www/html/vendor/danog/madelineproto/src/Ipc/Runner/WebRunner.php:122
+Revision: 8.0.0-beta194
+TL Trace:
+<br>
+exceptionErrorHandler(2,"fsockopen(): php_network_getaddresses: getaddrinfo for phpfpm.local failed: Temporary failure in name resolution","\/var\/www\/html\/vendor\/danog\/madelineproto\/src\/Ipc\/Runner\/WebRunner.php",122)<br>
+WebRunner.php(122): 	fsockopen("tls:\/\/phpfpm.local",80)<br>
+WebRunner.php(77):  	selfStart("\/vendor\/danog\/madelineproto\/src\/Ipc\/Runner\/entry.php?argv%5B0%5D=madeline-ipc&argv%5B1%5D=%2Fvar%2Fwww%2Fhtml%2Fsession.madeline&argv%5B2%5D=901072835&cwd=%2Fvar%2Fwww%2Fhtml&MadelineSelfRestart=1")<br>
+Server.php(110):    	start("\/var\/www\/html\/session.madeline",901072835)<br>
+Serialization.php(175):	startMe({})<br>
+AbstractDriver.php(425):	Amp\{closure}(null,null,[])<br>
+AbstractDriver.php(562):	invokeMicrotasks()<br>
+Revolt\EventLoop\Internal\{closure}()<br>
+AbstractDriver.php(498):	start()<br>
+AbstractDriver.php(537):	invokeCallbacks()<br>
+Revolt\EventLoop\Internal\{closure}()<br>
+AbstractDriver.php(94):	start()<br>
+DriverSuspension.php(117):	Revolt\EventLoop\Internal\{closure}()<br>
+Future.php(251):    	suspend()<br>
+API.php(307):       	await({})<br>
+API.php(194):       	connectToMadelineProto({})<br>
+index.php(56):      	__construct("session.madeline",{})
+Exception:      	fsockopen(): php_network_getaddresses: getaddrinfo for phpfpm.local failed: Temporary failure in name resolution in WebRunner.php:122
+WebRunner:      	Error while sending to tls://phpfpm.local:443: \danog\MadelineProto\Exception: fsockopen(): php_network_getaddresses: getaddrinfo for phpfpm.local failed: Temporary failure in name resolution in /var/www/html/vendor/danog/madelineproto/src/Ipc/Runner/WebRunner.php:122
+Revision: 8.0.0-beta194
+TL Trace:
+<br>
+exceptionErrorHandler(2,"fsockopen(): php_network_getaddresses: getaddrinfo for phpfpm.local failed: Temporary failure in name resolution","\/var\/www\/html\/vendor\/danog\/madelineproto\/src\/Ipc\/Runner\/WebRunner.php",122)<br>
+WebRunner.php(122): 	fsockopen("tls:\/\/phpfpm.local",443)<br>
+WebRunner.php(77):  	selfStart("\/vendor\/danog\/madelineproto\/src\/Ipc\/Runner\/entry.php?argv%5B0%5D=madeline-ipc&argv%5B1%5D=%2Fvar%2Fwww%2Fhtml%2Fsession.madeline&argv%5B2%5D=901072835&cwd=%2Fvar%2Fwww%2Fhtml&MadelineSelfRestart=1")<br>
+Server.php(110):    	start("\/var\/www\/html\/session.madeline",901072835)<br>
+Serialization.php(175):	startMe({})<br>
+AbstractDriver.php(425):	Amp\{closure}(null,null,[])<br>
+AbstractDriver.php(562):	invokeMicrotasks()<br>
+Revolt\EventLoop\Internal\{closure}()<br>
+AbstractDriver.php(498):	start()<br>
+AbstractDriver.php(537):	invokeCallbacks()<br>
+Revolt\EventLoop\Internal\{closure}()<br>
+AbstractDriver.php(94):	start()<br>
+DriverSuspension.php(117):	Revolt\EventLoop\Internal\{closure}()<br>
+Future.php(251):    	suspend()<br>
+API.php(307):       	await({})<br>
+API.php(194):       	connectToMadelineProto({})<br>
+index.php(56):      	__construct("session.madeline",{})
+Exception:      	Could not connect to ourselves, please check the server configuration! in WebRunner.php:135
+Server:         	\danog\MadelineProto\Exception: Could not connect to ourselves, please check the server configuration! in /var/www/html/vendor/danog/madelineproto/src/Ipc/Runner/WebRunner.php:135
+Revision: 8.0.0-beta194
+TL Trace:
+<br>
+WebRunner.php(77):  	selfStart("\/vendor\/danog\/madelineproto\/src\/Ipc\/Runner\/entry.php?argv%5B0%5D=madeline-ipc&argv%5B1%5D=%2Fvar%2Fwww%2Fhtml%2Fsession.madeline&argv%5B2%5D=901072835&cwd=%2Fvar%2Fwww%2Fhtml&MadelineSelfRestart=1")<br>
+Server.php(110):    	start("\/var\/www\/html\/session.madeline",901072835)<br>
+Serialization.php(175):	startMe({})<br>
+AbstractDriver.php(425):	Amp\{closure}(null,null,[])<br>
+AbstractDriver.php(562):	invokeMicrotasks()<br>
+Revolt\EventLoop\Internal\{closure}()<br>
+AbstractDriver.php(498):	start()<br>
+AbstractDriver.php(537):	invokeCallbacks()<br>
+Revolt\EventLoop\Internal\{closure}()<br>
+AbstractDriver.php(94):	start()<br>
+DriverSuspension.php(117):	Revolt\EventLoop\Internal\{closure}()<br>
+Future.php(251):    	suspend()<br>
+API.php(307):       	await({})<br>
+API.php(194):       	connectToMadelineProto({})<br>
+index.php(56):      	__construct("session.madeline",{})
+Server:         	Starting IPC server /var/www/html/session.madeline (web)
+Exception:      	fsockopen(): php_network_getaddresses: getaddrinfo for phpfpm.local failed: Temporary failure in name resolution in WebRunner.php:122
+WebRunner:      	Error while sending to tcp://phpfpm.local:80: \danog\MadelineProto\Exception: fsockopen(): php_network_getaddresses: getaddrinfo for phpfpm.local failed: Temporary failure in name resolution in /var/www/html/vendor/danog/madelineproto/src/Ipc/Runner/WebRunner.php:122
+Revision: 8.0.0-beta194
+TL Trace:
+<br>
+exceptionErrorHandler(2,"fsockopen(): php_network_getaddresses: getaddrinfo for phpfpm.local failed: Temporary failure in name resolution","\/var\/www\/html\/vendor\/danog\/madelineproto\/src\/Ipc\/Runner\/WebRunner.php",122)<br>
+WebRunner.php(122): 	fsockopen("tcp:\/\/phpfpm.local",80)<br>
+WebRunner.php(77):  	selfStart("\/vendor\/danog\/madelineproto\/src\/Ipc\/Runner\/entry.php?argv%5B0%5D=madeline-ipc&argv%5B1%5D=%2Fvar%2Fwww%2Fhtml%2Fsession.madeline&argv%5B2%5D=901072835&cwd=%2Fvar%2Fwww%2Fhtml&MadelineSelfRestart=1")<br>
+Server.php(117):    	start("\/var\/www\/html\/session.madeline",901072835)<br>
+Serialization.php(175):	startMe({})<br>
+AbstractDriver.php(425):	Amp\{closure}(null,null,[])<br>
+AbstractDriver.php(562):	invokeMicrotasks()<br>
+Revolt\EventLoop\Internal\{closure}()<br>
+AbstractDriver.php(498):	start()<br>
+AbstractDriver.php(537):	invokeCallbacks()<br>
+Revolt\EventLoop\Internal\{closure}()<br>
+AbstractDriver.php(94):	start()<br>
+DriverSuspension.php(117):	Revolt\EventLoop\Internal\{closure}()<br>
+Future.php(251):    	suspend()<br>
+API.php(307):       	await({})<br>
+API.php(194):       	connectToMadelineProto({})<br>
+index.php(56):      	__construct("session.madeline",{})
+Exception:      	fsockopen(): php_network_getaddresses: getaddrinfo for phpfpm.local failed: Temporary failure in name resolution in WebRunner.php:122
+WebRunner:      	Error while sending to tls://phpfpm.local:80: \danog\MadelineProto\Exception: fsockopen(): php_network_getaddresses: getaddrinfo for phpfpm.local failed: Temporary failure in name resolution in /var/www/html/vendor/danog/madelineproto/src/Ipc/Runner/WebRunner.php:122
+Revision: 8.0.0-beta194
+TL Trace:
+<br>
+exceptionErrorHandler(2,"fsockopen(): php_network_getaddresses: getaddrinfo for phpfpm.local failed: Temporary failure in name resolution","\/var\/www\/html\/vendor\/danog\/madelineproto\/src\/Ipc\/Runner\/WebRunner.php",122)<br>
+WebRunner.php(122): 	fsockopen("tls:\/\/phpfpm.local",80)<br>
+WebRunner.php(77):  	selfStart("\/vendor\/danog\/madelineproto\/src\/Ipc\/Runner\/entry.php?argv%5B0%5D=madeline-ipc&argv%5B1%5D=%2Fvar%2Fwww%2Fhtml%2Fsession.madeline&argv%5B2%5D=901072835&cwd=%2Fvar%2Fwww%2Fhtml&MadelineSelfRestart=1")<br>
+Server.php(117):    	start("\/var\/www\/html\/session.madeline",901072835)<br>
+Serialization.php(175):	startMe({})<br>
+AbstractDriver.php(425):	Amp\{closure}(null,null,[])<br>
+AbstractDriver.php(562):	invokeMicrotasks()<br>
+Revolt\EventLoop\Internal\{closure}()<br>
+AbstractDriver.php(498):	start()<br>
+AbstractDriver.php(537):	invokeCallbacks()<br>
+Revolt\EventLoop\Internal\{closure}()<br>
+AbstractDriver.php(94):	start()<br>
+DriverSuspension.php(117):	Revolt\EventLoop\Internal\{closure}()<br>
+Future.php(251):    	suspend()<br>
+API.php(307):       	await({})<br>
+API.php(194):       	connectToMadelineProto({})<br>
+index.php(56):      	__construct("session.madeline",{})
+Exception:      	fsockopen(): php_network_getaddresses: getaddrinfo for phpfpm.local failed: Temporary failure in name resolution in WebRunner.php:122
+WebRunner:      	Error while sending to tls://phpfpm.local:443: \danog\MadelineProto\Exception: fsockopen(): php_network_getaddresses: getaddrinfo for phpfpm.local failed: Temporary failure in name resolution in /var/www/html/vendor/danog/madelineproto/src/Ipc/Runner/WebRunner.php:122
+Revision: 8.0.0-beta194
+TL Trace:
+<br>
+exceptionErrorHandler(2,"fsockopen(): php_network_getaddresses: getaddrinfo for phpfpm.local failed: Temporary failure in name resolution","\/var\/www\/html\/vendor\/danog\/madelineproto\/src\/Ipc\/Runner\/WebRunner.php",122)<br>
+WebRunner.php(122): 	fsockopen("tls:\/\/phpfpm.local",443)<br>
+WebRunner.php(77):  	selfStart("\/vendor\/danog\/madelineproto\/src\/Ipc\/Runner\/entry.php?argv%5B0%5D=madeline-ipc&argv%5B1%5D=%2Fvar%2Fwww%2Fhtml%2Fsession.madeline&argv%5B2%5D=901072835&cwd=%2Fvar%2Fwww%2Fhtml&MadelineSelfRestart=1")<br>
+Server.php(117):    	start("\/var\/www\/html\/session.madeline",901072835)<br>
+Serialization.php(175):	startMe({})<br>
+AbstractDriver.php(425):	Amp\{closure}(null,null,[])<br>
+AbstractDriver.php(562):	invokeMicrotasks()<br>
+Revolt\EventLoop\Internal\{closure}()<br>
+AbstractDriver.php(498):	start()<br>
+AbstractDriver.php(537):	invokeCallbacks()<br>
+Revolt\EventLoop\Internal\{closure}()<br>
+AbstractDriver.php(94):	start()<br>
+DriverSuspension.php(117):	Revolt\EventLoop\Internal\{closure}()<br>
+Future.php(251):    	suspend()<br>
+API.php(307):       	await({})<br>
+API.php(194):       	connectToMadelineProto({})<br>
+index.php(56):      	__construct("session.madeline",{})
+Exception:      	Could not connect to ourselves, please check the server configuration! in WebRunner.php:135
+Server:         	\danog\MadelineProto\Exception: Could not connect to ourselves, please check the server configuration! in /var/www/html/vendor/danog/madelineproto/src/Ipc/Runner/WebRunner.php:135
+Revision: 8.0.0-beta194
+TL Trace:
+<br>
+WebRunner.php(77):  	selfStart("\/vendor\/danog\/madelineproto\/src\/Ipc\/Runner\/entry.php?argv%5B0%5D=madeline-ipc&argv%5B1%5D=%2Fvar%2Fwww%2Fhtml%2Fsession.madeline&argv%5B2%5D=901072835&cwd=%2Fvar%2Fwww%2Fhtml&MadelineSelfRestart=1")<br>
+Server.php(117):    	start("\/var\/www\/html\/session.madeline",901072835)<br>
+Serialization.php(175):	startMe({})<br>
+AbstractDriver.php(425):	Amp\{closure}(null,null,[])<br>
+AbstractDriver.php(562):	invokeMicrotasks()<br>
+Revolt\EventLoop\Internal\{closure}()<br>
+AbstractDriver.php(498):	start()<br>
+AbstractDriver.php(537):	invokeCallbacks()<br>
+Revolt\EventLoop\Internal\{closure}()<br>
+AbstractDriver.php(94):	start()<br>
+DriverSuspension.php(117):	Revolt\EventLoop\Internal\{closure}()<br>
+Future.php(251):    	suspend()<br>
+API.php(307):       	await({})<br>
+API.php(194):       	connectToMadelineProto({})<br>
+index.php(56):      	__construct("session.madeline",{})
+Serialization:  	MadelineProto is starting, please wait...
+Serialization:  	Connected to IPC socket!
+Server:         	IPC server started successfully!
+DialogHandler, SergeySvist:  	Getting dialogs...
+UpdateHandler, SergeySvist:  	Parsing updates (updateShort) received via the socket...
+FeedLoop, SergeySvist:       	Resumed update feed loop channel 1689250492
+UpdateHandler, SergeySvist:  	Saving update of type updateDeleteChannelMessages
+MinDatabase, SergeySvist:    	Found 279 pending contexts
+MinDatabase, SergeySvist:    	Found 117 pending contexts
+Logger:         	MadelineProto 8.0.0-beta194
+Logger:         	Copyright (C) 2016-2024 Daniil Gentili
+Logger:         	Licensed under AGPLv3
+Logger:         	https://github.com/danog/MadelineProto
+Serialization:  	Got exclusive session lock!
+DataCenter, SergeySvist:     	Acquiring connect lock for 2!
+DataCenter, SergeySvist:     	Connecting to DC 2
+DataCenterConnection, SergeySvist: 	Restoring 0 messages to DC 2
+Session, SergeySvist:        	Resetting session in DC 2.0...
+Connection, SergeySvist:     	Connecting to DC 2.0 via tcp://149.154.167.41:443 main DC 2, via ipv4 using AbridgedStream => BufferedRawStream => DefaultStream 
+Connection, SergeySvist:     	Connected to DC 2.0 via tcp://149.154.167.41:443 main DC 2, via ipv4 using AbridgedStream => BufferedRawStream => DefaultStream!
+DataCenterConnection, SergeySvist: 	Acquiring lock in order to init auth for DC 2
+DataCenterConnection, SergeySvist: 	Initing auth for DC 2
+DataCenterConnection, SergeySvist: 	Done initing auth for DC 2
+Session, SergeySvist:        	Garbage collected 0 outgoing messages in DC 2, 1 left
+PingLoop, SergeySvist:       	Ping DC 2.0
+ResponseHandler, SergeySvist: 	Auth key not registered in DC 2 with RPC error AUTH_KEY_UNREGISTERED, resetting temporary and permanent auth keys...
+ResponseHandler, SergeySvist: 	Permanent auth key was main authorized key, logging out...
+ResponseHandler, SergeySvist: 	!!!!!!! WARNING !!!!!!!
+Telegram's flood prevention system suspended this account.
+To continue, manual verification is required.
+Send an email to recover@telegram.org, asking to unban the phone number +380664120696, and shortly describe what will you do with this phone number.
+Then login again.
+If you intentionally deleted this account, ignore this message.
+GarbageCollector, SergeySvist: 	gc_collect_cycles done. Cleaned memory: 0 Mb
