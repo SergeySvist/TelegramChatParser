@@ -2867,3 +2867,42 @@ Send an email to recover@telegram.org, asking to unban the phone number +3806641
 Then login again.
 If you intentionally deleted this account, ignore this message.
 GarbageCollector, SergeySvist: 	gc_collect_cycles done. Cleaned memory: 0 Mb
+Logger:         	MadelineProto 8.0.0-beta194
+Logger:         	Copyright (C) 2016-2024 Daniil Gentili
+Logger:         	Licensed under AGPLv3
+Logger:         	https://github.com/danog/MadelineProto
+Serialization:  	Got exclusive session lock!
+DataCenter, SergeySvist:     	Acquiring connect lock for 2!
+DataCenter, SergeySvist:     	Connecting to DC 2
+DataCenterConnection, SergeySvist: 	Restoring 0 messages to DC 2
+Session, SergeySvist:        	Resetting session in DC 2.0...
+Connection, SergeySvist:     	Connecting to DC 2.0 via tcp://149.154.167.41:443 main DC 2, via ipv4 using AbridgedStream => BufferedRawStream => DefaultStream 
+Connection, SergeySvist:     	Connected to DC 2.0 via tcp://149.154.167.41:443 main DC 2, via ipv4 using AbridgedStream => BufferedRawStream => DefaultStream!
+DataCenterConnection, SergeySvist: 	Acquiring lock in order to init auth for DC 2
+DataCenterConnection, SergeySvist: 	Initing auth for DC 2
+DataCenterConnection, SergeySvist: 	Done initing auth for DC 2
+Session, SergeySvist:        	Garbage collected 0 outgoing messages in DC 2, 1 left
+PingLoop, SergeySvist:       	Ping DC 2.0
+MTProto, SergeySvist:        	Starting update system
+MTProto, SergeySvist:        	Obtaining updates after deserialization...
+APIWrapper, SergeySvist:     	MadelineProto is ready!
+SessionPaths, SergeySvist:   	Waiting for exclusive lock of C:\xampp\htdocs\First\TelegramChatsParser\session.madeline\ipcState.php.lock...
+SessionPaths, SergeySvist:   	Got exclusive lock of C:\xampp\htdocs\First\TelegramChatsParser\session.madeline\ipcState.php.lock...
+GarbageCollector, SergeySvist: 	gc_collect_cycles done. Cleaned memory: 0 Mb
+FeedLoop, SergeySvist:       	Resumed update feed loop generic
+UpdateHandler, SergeySvist:  	Parsing updates (updateShort) received via the socket...
+FeedLoop, SergeySvist:       	Resumed update feed loop generic
+UpdateHandler, SergeySvist:  	Saving update of type updateUserStatus
+UpdateHandler, SergeySvist:  	Parsing updates (updateShort) received via the socket...
+FeedLoop, SergeySvist:       	Resumed update feed loop generic
+UpdateHandler, SergeySvist:  	Saving update of type updateUserStatus
+Session, SergeySvist:        	Garbage collected 18 incoming messages in DC 2, 0 left
+Session, SergeySvist:        	Garbage collected 16 outgoing messages in DC 2, 0 left
+UpdateHandler, SergeySvist:  	Parsing updates (updates) received via the socket...
+SeqLoop, SergeySvist:        	Was fed updates of type updates...
+FeedLoop, SergeySvist:       	Resumed update feed loop channel 1757089925
+MinDatabase, SergeySvist:    	Don't have origin info with min peer -1001757089925, this may fail
+FeedLoop, SergeySvist:       	Resumed update feed loop channel 1757089925
+UpdateLoop, SergeySvist:     	Channel private, exiting getUpdate loop channel 1757089925
+Session, SergeySvist:        	Garbage collected 5 incoming messages in DC 2, 0 left
+Session, SergeySvist:        	Garbage collected 4 outgoing messages in DC 2, 0 left

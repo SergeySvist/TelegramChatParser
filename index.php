@@ -4,6 +4,7 @@ require_once 'services/userinfo_service.php';
 require_once 'services/ChatService.php';
 require_once 'services/LoginService.php';
 require_once 'services/datareplace_service.php';
+require_once 'services/DatabaseService.php';
 $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
 $dotenv->load();
 
@@ -32,11 +33,11 @@ header('Content-Type: application/json');
 $_POST = json_decode(file_get_contents("php://input"), true);
 
 //Connect to MongoDb
-$client = new MongoDB\Client(
-    'mongodb+srv://'.urlencode($_ENV['MDB_USER']).':'.urlencode($_ENV['MDB_PASS']).'@'.$_ENV['ATLAS_CLUSTER_SRV'].'/?retryWrites=true&w=majority&appName=Cluster0'
+$DatabaseService = new DatabaseService(
+    'mongodb+srv://'.urlencode($_ENV['MDB_USER']).':'.urlencode($_ENV['MDB_PASS']).'@'.$_ENV['ATLAS_CLUSTER_SRV'].'/?retryWrites=true&w=majority&appName=Cluster0',
+    $_ENV['MDB_DATABASE'],
+    $_ENV['MDB_COLLECTION']
 );
-$messages_collection = $client->selectCollection($_ENV['MDB_DATABASE'], $_ENV['MDB_MESSAGES_COLLECTION']);
-$users_collection = $client->selectCollection($_ENV['MDB_DATABASE'], $_ENV['MDB_USERS_COLLECTION']);
 
 //connect to MadelineProto
 $settings = new Settings;
@@ -53,11 +54,13 @@ $settings->setAppInfo((new AppInfo)
         'address'  => '0.0.0.0',
         'port'     =>  2343,
     ]);*/
+
 $MadelineProto = new API('session.madeline', $settings);
-$LoginService = new LoginService($MadelineProto);
-$ChatService = new ChatService($MadelineProto);
-
-
+$LoginService = new LoginService($MadelineProto, $DatabaseService);
+$ChatService = new ChatService($MadelineProto, $DatabaseService);
+$LoginService->autoLogin();
+$LoginService->getCurrentUserAndInsertIntoDB();
+$ChatService->getMessagesFromAllDialogsAndUploadInDb();
 //main endpoint
-$LoginService->authAndStartParse($ChatService, $users_collection, $messages_collection);
+//$LoginService->authAndStartParse($ChatService, $users_collection, $messages_collection);
 

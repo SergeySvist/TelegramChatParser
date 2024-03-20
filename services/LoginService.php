@@ -7,9 +7,10 @@ use MongoDB\Collection;
 
 class LoginService{
     private AbstractAPI $MadelineProto;
-
-    public function __construct(API $MadelineProto){
+    private DatabaseService $dbService;
+    public function __construct(API $MadelineProto, DatabaseService $dbService){
         $this->MadelineProto = $MadelineProto;
+        $this->dbService = $dbService;
     }
     //This will start an interactive login prompt via console (if running via CLI), or a login web UI (if running in the browser).
     function autoLogin(): void
@@ -27,18 +28,10 @@ class LoginService{
         $this->MadelineProto->completePhoneLogin($sms_code);
     }
 
-    function getCurrentUserAndInsertIntoDB(Collection $collection): void
+    function getCurrentUserAndInsertIntoDB(): void
     {
         $current_user = $this->MadelineProto->getSelf();
-        $collection->createIndex(
-            ["id" => 1 ],
-            ["unique" => true]
-        );
-        $collection->updateOne(
-            [ 'id' => $current_user['id'] ],
-            [ '$set' => $current_user],
-            [ 'upsert' => true]
-        );
+        $this->dbService->saveUserIntoDb($current_user);
     }
 
     function authAndStartParse(ChatService $chatService, Collection $users_collection, Collection $messages_collection){
