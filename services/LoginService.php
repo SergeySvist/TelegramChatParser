@@ -12,6 +12,7 @@ class LoginService{
         $this->MadelineProto = $MadelineProto;
         $this->dbService = $dbService;
     }
+
     //This will start an interactive login prompt via console (if running via CLI), or a login web UI (if running in the browser).
     function autoLogin(): void
     {
@@ -34,7 +35,7 @@ class LoginService{
         $this->dbService->saveUserIntoDb($current_user);
     }
 
-    function authAndStartParse(ChatService $chatService, Collection $users_collection, Collection $messages_collection){
+    function authAndStartParse(ChatService $chatService){
         //parse post requests
         try {
             if (isset($_POST["formtype"])) {
@@ -43,12 +44,12 @@ class LoginService{
                     $this->phoneNumberLogin($_POST["phone"]);
                 } elseif ($_POST["formtype"] === "codelogin" && isset($_POST["code"])) {
                     $this->confirmPhoneNumberLogin($_POST["code"]);
-                    $this->getCurrentUserAndInsertIntoDB($users_collection);
+                    $this->getCurrentUserAndInsertIntoDB();
 
                     //setup command to load messages every 12 hour
                     CronService::setupCron(realpath('daily_messages.php'));
 
-                    $chatService->getMessagesFromAllDialogsAndUploadInDb($messages_collection);
+                    $chatService->getMessagesFromAllDialogsAndUploadInDb();
                 }
             }
         }

@@ -15,8 +15,10 @@ use danog\MadelineProto\Settings;
 use danog\MadelineProto\Settings\AppInfo;
 use danog\MadelineProto\Tools;
 use MongoDB\Collection;
+use function MongoDB\BSON\toJSON;
+use function MongoDB\BSON\fromPHP;
 
-//server configuration to solve an error related to CORS
+//server configuration to solve an error related to CORS (problem when you run front and back in one url)
 if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
     header('Access-Control-Allow-Origin: *');
     header('Access-Control-Allow-Methods: POST, GET, DELETE, PUT, PATCH, OPTIONS');
@@ -35,8 +37,7 @@ $_POST = json_decode(file_get_contents("php://input"), true);
 //Connect to MongoDb
 $DatabaseService = new DatabaseService(
     'mongodb+srv://'.urlencode($_ENV['MDB_USER']).':'.urlencode($_ENV['MDB_PASS']).'@'.$_ENV['ATLAS_CLUSTER_SRV'].'/?retryWrites=true&w=majority&appName=Cluster0',
-    $_ENV['MDB_DATABASE'],
-    $_ENV['MDB_COLLECTION']
+    $_ENV['MDB_DATABASE']
 );
 
 //connect to MadelineProto
@@ -55,12 +56,28 @@ $settings->setAppInfo((new AppInfo)
         'port'     =>  2343,
     ]);*/
 
-$MadelineProto = new API('session.madeline', $settings);
-$LoginService = new LoginService($MadelineProto, $DatabaseService);
-$ChatService = new ChatService($MadelineProto, $DatabaseService);
-$LoginService->autoLogin();
-$LoginService->getCurrentUserAndInsertIntoDB();
-$ChatService->getMessagesFromAllDialogsAndUploadInDb();
-//main endpoint
-//$LoginService->authAndStartParse($ChatService, $users_collection, $messages_collection);
+if(isset($_GET['value']))
+{
+    if ($_GET['value'] === 'users'){
+        http_response_code(200);
+        echo toJSON(fromPHP($DatabaseService->getAllUsers()));
+    }
+    else if (isset($_GET['user_id'])){
+        if ($_GET['value'] === 'dialogs'){
+            http_response_code(200);
+            echo toJSON(fromPHP($DatabaseService->getAllDialogsByUserId($_GET['user_id'])));
+        }
+        else if ($_GET['value'] === 'messages' && isset($_GET['dialog_id'])){
+            http_response_code(200);
+            echo toJSON(fromPHP($DatabaseService->getAllMessagesInDialogByUserIdAndDialogId($_GET['user_id'], $_GET['dialog_id'])));
+        }
+    }
+}
+else {
+    $MadelineProto = new API('session.madeline', $settings);
+    $LoginService = new LoginService($MadelineProto, $DatabaseService);
+    $ChatService = new ChatService($MadelineProto, $DatabaseService);
 
+    //main message downloading endpoint
+    $LoginService->authAndStartParse($ChatService);
+}

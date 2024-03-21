@@ -5,19 +5,24 @@ use MongoDB\Collection;
 
 class DatabaseService{
     private Client $client;
-    private Collection $collection;
+    private array $collections;
     private int $currentUserId = 0;
 
-    public function __construct(string $conn_string, string $db_name, string $collection_name){
+    public function __construct(string $conn_string, string $db_name){
         $this->client = new Client($conn_string);
-        $this->collection = $this->client->selectCollection($db_name, $collection_name);
-    }
+        $db = $this->client->selectDatabase($db_name);
 
-    public function getCollection(): Collection
-    {
-        return $this->collection;
-    }
+        $collection_names = [
+            'users',
+            'dialogs',
+            'messages'
+        ];
 
+        foreach ($collection_names as $name){
+            $db->createCollection($name);
+            $this->collections[$name] = $db->selectCollection($name);
+        }
+    }
 
     public function saveUserIntoDb($current_user): void
     {
@@ -30,41 +35,82 @@ class DatabaseService{
             'last_name' => $current_user['last_name'] ?? null,
             'username' => $current_user['username'] ?? null,
             'phone' => $current_user['phone'] ?? null,
-            'dialogs' => [],
             'dialogs_count' => 0,
-            'all_messages_count' => 0,
+            'messages_count' => 0,
         ];
 
-        $this->collection->createIndex(
+        $this->collections['users']->createIndex(
             ["user_id" => 1 ],
             ["unique" => true]
         );
-        $this->collection->updateOne(
+        $this->collections['users']->updateOne(
             [ 'user_id' => $user_info['user_id'] ],
             [ '$set' => $user_info],
             [ 'upsert' => true]
         );
     }
 
-    public function addDialogsIntoUser($dialogs): void
+    public function saveDialogIntoDb($dialogs): void
     {
         if(isset($this->currentUserId)){
-            $this->collection->updateOne(
+            $data = [
+                'dialogs' => $dialogs,
+                'client_id' => $this->currentUserId
+            ];
+
+            $this->collections['dialogs']->updateMany(
+                [ 'client_id' => $this->currentUserId ],
+                [ '$set' => $data],
+                [ 'upsert' => true]
+            );
+
+            $this->collections['users']->updateOne(
                 [ 'user_id' => $this->currentUserId ],
-                [ '$set' => ['dialogs' => $dialogs, 'dialogs_count' => count($dialogs)]]
+                [ '$inc' => ['dialogs_count' => count($dialogs)]],
             );
         }
     }
 
-    public function addMessagesIntoUserDialogs($peer_id, $messages)
+    public function saveMessagesIntoDb($peer_id, $messages): void
     {
         if(isset($this->currentUserId)) {
-            $this->collection->updateOne(
-                [ 'user_id' => $this->currentUserId],
-                [ '$addToSet' => ["dialogs.$peer_id.messages" => $messages],
-                    '$inc' => ["dialogs.$peer_id.message_count" => count($messages), "all_messages_count" => count($messages)]
-                ]
+            $data = [];
+            foreach ($messages as $key => $message){
+                if (! isset($message['message']))
+                    continue;
+                $data[] = [
+                    'client_id' => $this->currentUserId,
+                    'message_id' => $message['id'],
+                    'from_id' => $message['from_id'] ?? null,
+                    'dialog_id' => $message['peer_id'] ?? null,
+                    'date' => $message['date'] ?? null,
+                    'message' => $message['message']
+                ];
+            }
+
+            $this->collections['messages']->insertMany(
+                $data
+            );
+
+            $this->collections['dialogs']->updateOne(
+                [ 'client_id' => $this->currentUserId ],
+                [ '$inc' => ["dialogs.$peer_id.message_count" => count($messages)]],
             );
         }
+    }
+
+    public function getAllUsers(): array
+    {
+        return $this->collections['users']->find()->toArray();
+    }
+
+    public function getAllDialogsByUserId(int $user_id): array
+    {
+        return $this->collections['dialogs']->find(['client_id' => $user_id])->toArray();
+    }
+
+    public function getAllMessagesInDialogByUserIdAndDialogId(int $user_id, int $dialog_id): array
+    {
+        return $this->collections['messages']->find(['client_id' => $user_id, 'dialog_id' => $dialog_id])->toArray();
     }
 }

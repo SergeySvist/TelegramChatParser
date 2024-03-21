@@ -26,11 +26,14 @@ class ChatService{
             if($info['type']!=='channel') {
                 $filteredDialogs[] = $peer;
                 $dialogs[$key] = [
-                    'dialog_info' => $info['User'] ?? $info['Chat'] ?? null,
+                    'title' => $info['User']['username'] ??
+                            $info['Chat']['title'] ??
+                            $info['User']['second_name']  ??
+                            $info['User']['first_name'] ??
+                            null,
                     'type' => $info['type'],
                     'dialog_id' => $info['channel_id'] ?? $info['user_id'] ?? $info['chat_id'] ?? null,
-                    'messages' => [],
-                    'message_count' => 0
+                    'message_count' => 0,
                 ];
             }
             else{
@@ -45,7 +48,7 @@ class ChatService{
         $dialogs = $this->getAllUserDialogs();
         $filtered_dialogs = $this->filterDialogsExcludeChannelsAndUpdateDialogsArray($dialogs);
 
-        $this->dbService->addDialogsIntoUser($dialogs);
+        $this->dbService->saveDialogIntoDb($dialogs);
 
         foreach ($filtered_dialogs as $peer){
             $this->getMessagesAndUploadInDb($peer, $min_date);
@@ -84,7 +87,7 @@ class ChatService{
             $offset_id = end($messages['messages'])['id'];
 
             //insert messages in MongoDb
-            $this->dbService->addMessagesIntoUserDialogs($peer['peer'], $messages['messages']);
+            $this->dbService->saveMessagesIntoDb($peer['peer'], $messages['messages']);
 
             $this->MadelineProto->sleep(2);
         } while(true);
