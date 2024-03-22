@@ -1,6 +1,5 @@
 <?php
-
-
+require_once  'CronService.php';
 use danog\MadelineProto\AbstractAPI;
 use danog\MadelineProto\API;
 use MongoDB\Collection;
