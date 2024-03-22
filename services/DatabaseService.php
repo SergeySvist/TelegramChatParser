@@ -96,6 +96,11 @@ class DatabaseService{
                 [ 'client_id' => $this->currentUserId ],
                 [ '$inc' => ["dialogs.$peer_id.message_count" => count($messages)]],
             );
+
+            $this->collections['users']->updateOne(
+                [ 'user_id' => $this->currentUserId ],
+                [ '$inc' => ["messages_count" => count($messages)]],
+            );
         }
     }
 
